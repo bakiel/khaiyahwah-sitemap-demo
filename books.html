@@ -35,15 +35,16 @@
         }
         /* Adjustments for new theme */
         body { background-color: var(--light-bg); color: var(--text-light); }
-        article { background-color: white; color: var(--text-dark); }
+        article { background-color: transparent; box-shadow: none; padding: 0; } /* Remove article background/shadow */
         nav[aria-label="breadcrumb"] a { color: var(--gold); }
         nav[aria-label="breadcrumb"] a:hover { text-decoration: underline; }
         nav[aria-label="breadcrumb"] span { color: var(--text-dark); }
         h1 { color: var(--dark-bg); }
         h2 { color: var(--gold); } /* Make subheadings gold */
+        h3 { color: var(--dark-bg); } /* Ensure h3 is dark */
         .cta-button {
             display: inline-block;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 1.5rem; /* py-3 px-6 */
             margin-top: 1rem; /* Adjusted margin */
             border-radius: 0.375rem;
             font-weight: 600;
@@ -88,78 +89,78 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-             <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <span class="font-semibold">The Impregnable People Books</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+             <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <span class="font-semibold text-dark-bg">The Impregnable People Books</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">The Impregnable People Books</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">The Impregnable People Books</h1>
 
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            <p class="text-lg text-dark-bg leading-relaxed mb-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
                 "The Impregnable People" chronicles are the definitive, firsthand account of the African Hebrew Israelites' modern-day exodus and the establishment of Yah's Kingdom in the Holy Land. Authored by founding pioneer Prince Gavriel Ha Gadol, these volumes offer an unparalleled perspective on this fulfillment of prophecy.
             </p>
 
             <!-- Book Showcase Section -->
-            <section class="book-section">
-                <h2 class="text-2xl font-semibold text-blue-800 mb-4">Book Showcase</h2>
+            <section class="book-section max-w-5xl mx-auto"> <!-- Constrain width -->
+                <h2 class="text-2xl font-semibold mb-4 text-center">Book Showcase</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Part One: Exodus from Captivity</h3>
+                        <h3 class="text-xl font-semibold mb-2">Part One: Exodus from Captivity</h3>
                         <div class="placeholder-image">[Image Placeholder: Book Cover - Part 1]</div>
-                        <p class="text-gray-700 leading-relaxed mb-3">
+                        <p class="text-dark-bg leading-relaxed mb-3">
                             This volume documents the spiritual awakening within America, the divine vision received by H.E. Ben Ammi in 1966, and the arduous exodus through the wilderness of Liberia.
                         </p>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-dark-bg leading-relaxed">
                             <strong>Key Themes:</strong> Awakening from spiritual death, the divine call to return, wilderness purification, overcoming immense obstacles through faith.
                         </p>
-                         <a href="store.html#book-part1" class="cta-button mt-4">Purchase Part One</a>
+                         <a href="store.html#book-part1" class="cta-button">Purchase Part One</a>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Part Two: Kingdom Established</h3>
+                        <h3 class="text-xl font-semibold mb-2">Part Two: Kingdom Established</h3>
                         <div class="placeholder-image">[Image Placeholder: Book Cover - Part 2]</div>
-                         <p class="text-gray-700 leading-relaxed mb-3">
+                         <p class="text-dark-bg leading-relaxed mb-3">
                             Part Two details the historic arrival in the Holy Land, the establishment of the community in Dimona, the formation of the Divine Council, and the trials endured over twenty years leading to divine vindication and legal recognition.
                         </p>
-                         <p class="text-gray-700 leading-relaxed">
+                         <p class="text-dark-bg leading-relaxed">
                             <strong>Key Themes:</strong> Fulfillment of prophecy, building Yah's Kingdom, the test of patience, divine protection, the Great Show of Strength, covenant remembered.
                         </p>
-                         <a href="store.html#book-part2" class="cta-button mt-4">Purchase Part Two</a>
+                         <a href="store.html#book-part2" class="cta-button">Purchase Part Two</a>
                     </div>
                 </div>
             </section>
 
             <!-- Author Profile Link Section -->
-            <section class="book-section text-center">
-                 <h2 class="text-2xl font-semibold text-blue-800 mb-4">About the Author</h2>
-                 <div class="placeholder-image w-40 h-40 mx-auto">[Image Placeholder: Prince Gavriel Ha Gadol - Small Portrait]</div>
-                 <p class="text-gray-700 leading-relaxed my-4 max-w-2xl mx-auto">
+            <section class="book-section text-center max-w-4xl mx-auto"> <!-- Constrain width -->
+                 <h2 class="text-2xl font-semibold mb-4">About the Author</h2>
+                 <div class="placeholder-image w-40 h-40 mx-auto rounded-full">[Image Placeholder: Prince Gavriel Ha Gadol - Small Portrait]</div> <!-- Make placeholder circular -->
+                 <p class="text-dark-bg leading-relaxed my-4">
                     Learn more about Prince Gavriel Ha Gadol, the "Prince of Love," whose life journey from George Butler in segregated Louisiana to a founding pioneer and Prince in Yah's Kingdom embodies the transformation chronicled in his writings.
                  </p>
                  <a href="author-profile.html" class="cta-button">Read Author Profile</a>
             </section>
 
             <!-- Audiobook Experience Section -->
-            <section class="book-section">
-                 <h2 class="text-2xl font-semibold text-blue-800 mb-4">Audiobook Experience</h2>
+            <section class="book-section max-w-4xl mx-auto"> <!-- Constrain width -->
+                 <h2 class="text-2xl font-semibold mb-4 text-center">Audiobook Experience</h2>
                  <div class="placeholder-image">[Image Placeholder: Audiobook cover or listening imagery]</div>
-                 <p class="text-gray-700 leading-relaxed mb-3">
+                 <p class="text-dark-bg leading-relaxed mb-3 text-center">
                     Immerse yourself in the prophetic journey through the audiobook editions of "The Impregnable People." Experience the passion, challenges, and divine guidance of the exodus narrative through compelling narration.
                  </p>
-                 <p class="text-gray-700 leading-relaxed mb-4">
+                 <p class="text-dark-bg leading-relaxed mb-4 text-center">
                     Sample clips are available to give you a taste of this powerful listening experience.
                  </p>
                  <!-- Placeholder for audio player/samples -->
-                 <div class="bg-gray-100 p-4 rounded text-center text-gray-600 italic">
+                 <div class="bg-gray-100 p-4 rounded text-center grey-text italic">
                     [Audio Player Placeholder: Sample clips will be embedded here]
                  </div>
                  <div class="text-center mt-4">
                     <a href="store.html#audiobook" class="cta-button">Purchase Audiobook</a>
                  </div>
             </section>
-
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

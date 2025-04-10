@@ -35,13 +35,15 @@
         }
         /* Adjustments for new theme */
         body { background-color: var(--light-bg); color: var(--text-light); }
-        article { background-color: white; color: var(--text-dark); }
+        article { background-color: transparent; box-shadow: none; padding: 0; } /* Remove article background/shadow */
         nav[aria-label="breadcrumb"] a { color: var(--gold); }
         nav[aria-label="breadcrumb"] a:hover { text-decoration: underline; }
         nav[aria-label="breadcrumb"] span { color: var(--text-dark); }
         h1 { color: var(--dark-bg); }
         h2 { color: var(--gold); } /* Make subheadings gold */
-        blockquote { color: #555; border-left-color: var(--gold); }
+        h3.subtitle { color: var(--text-grey); font-weight: 600; } /* Style subtitle */
+        blockquote { color: var(--text-grey); border-left-color: var(--gold); } /* Use quote class styling */
+        .content-body { color: var(--text-dark); } /* Ensure main text is dark */
     </style>
 </head>
 <body>
@@ -74,26 +76,27 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-            <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <a href="testimonies.html" class="hover:underline">Testimonies</a> >
-                <span class="font-semibold">Community Testimonies</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+            <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <a href="testimonies.html" class="gold-text hover:underline">Testimonies</a> >
+                <span class="font-semibold text-dark-bg">Community Testimonies</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Community Testimonies: Voices from the Kingdom</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">Community Testimonies: Voices from the Kingdom</h1>
 
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            <p class="text-lg text-dark-bg leading-relaxed mb-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
                 Beyond the foundational pioneers, the Kingdom of Yah thrives through the experiences and contributions of Saints from all walks of life and generations. Here are perspectives from community members sharing their unique journeys and insights.
             </p>
 
             <!-- Ahmadiel Ben Yehuda Testimony -->
-            <section class="testimony-section">
-                <h2 class="text-2xl font-semibold text-center text-blue-800 mb-2">Ahmadiel Ben Yehuda</h2>
-                <h3 class="text-lg text-center text-gray-600 font-medium mb-4">Voice of the Kingdom</h3>
+            <section class="testimony-section max-w-4xl mx-auto"> <!-- Constrain width -->
+                <h2 class="text-2xl font-semibold text-center mb-1">Ahmadiel Ben Yehuda</h2>
+                <h3 class="subtitle text-lg text-center mb-4">Voice of the Kingdom</h3>
                 <div class="placeholder-image">[Image Placeholder: Ahmadiel Ben Yehuda]</div>
-                <div class="text-gray-700 leading-relaxed space-y-4">
+                <div class="content-body leading-relaxed space-y-4">
                     <p>
                         "Prior to the pivotal moment in 1986, a few Hebrew Israelites had been deported, which was a destabilizing action. The community decided to march to Jerusalem to plead our case, but our path was immediately surrounded by Israeli forces. Rather than confrontation, Ben Ammi announced that the community would fast for five days, and miraculously, the Israeli authorities began to regard us better."
                     </p>
@@ -116,11 +119,11 @@
             </section>
 
             <!-- Yafah Baht Gavriel Testimony -->
-             <section class="testimony-section">
-                <h2 class="text-2xl font-semibold text-center text-blue-800 mb-2">Yafah Baht Gavriel</h2>
-                <h3 class="text-lg text-center text-gray-600 font-medium mb-4">Third Generation Voice</h3>
+             <section class="testimony-section max-w-4xl mx-auto"> <!-- Constrain width -->
+                <h2 class="text-2xl font-semibold text-center mb-1">Yafah Baht Gavriel</h2>
+                <h3 class="subtitle text-lg text-center mb-4">Third Generation Voice</h3>
                 <div class="placeholder-image">[Image Placeholder: Yafah Baht Gavriel]</div>
-                <div class="text-gray-700 leading-relaxed space-y-4">
+                <div class="content-body leading-relaxed space-y-4">
                     <p>
                         "I was born in the House of Life in 1992, delivered by our community midwives according to natural methods. My earliest memories are of Sabbath gatherings where our entire community would come together in white garments to pray, sing, and receive wisdom from our elders."
                     </p>
@@ -133,7 +136,7 @@
                     <p>
                         "After completing education in the Kingdom School, I had opportunities to study at Israeli universities and even spend time in our jurisdictions abroad. These experiences only strengthened my appreciation for the sanctuary our ancestors built. I've seen the chaos, moral confusion, and physical degeneration that characterize Western society, and I'm profoundly grateful for the alternative path we've established."
                     </p>
-                     <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-6 text-lg">
+                     <blockquote class="quote my-6 text-lg"> <!-- Use quote class -->
                         "Today, as I teach the fourth generation of Saints, I witness the continuity of our divine mission. These children—healthy, confident, spiritually grounded—are the living fulfillment of Isaiah's prophecy: 'And all thy children shall be taught of the LORD; and great shall be the peace of thy children.'"
                     </blockquote>
                     <p>
@@ -146,11 +149,11 @@
             </section>
 
             <!-- Yitzchak Ben Yisrael Testimony -->
-             <section class="testimony-section">
-                <h2 class="text-2xl font-semibold text-center text-blue-800 mb-2">Yitzchak Ben Yisrael</h2>
-                 <h3 class="text-lg text-center text-gray-600 font-medium mb-4">From Outsider to Insider</h3>
+             <section class="testimony-section max-w-4xl mx-auto"> <!-- Constrain width -->
+                <h2 class="text-2xl font-semibold text-center mb-1">Yitzchak Ben Yisrael</h2>
+                 <h3 class="subtitle text-lg text-center mb-4">From Outsider to Insider</h3>
                 <div class="placeholder-image">[Image Placeholder: Yitzchak Ben Yisrael]</div>
-                <div class="text-gray-700 leading-relaxed space-y-4">
+                <div class="content-body leading-relaxed space-y-4">
                     <p>
                         "I was not born into this community. I grew up Baptist in St. Louis. I encountered the Hebrew Israelites in 1988 when I was in the Army and stationed in Sinai as part of the Multinational Force & Observers peacekeeping mission. I took a weekend trip to Israel and met some brothers from Dimona at a market in Be'er Sheva."
                     </p>
@@ -163,7 +166,7 @@
                     <p>
                         "I underwent a formal renaming and immersion. Taking the name Yitzchak was part of shedding my old self. Over the years I married (to a sister whose parents were pioneers) and became fully part of the family. Now I'm a construction supervisor, helping build our future homes."
                     </p>
-                     <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-6 text-lg">
+                     <blockquote class="quote my-6 text-lg"> <!-- Use quote class -->
                         "From outsider to insider, I can testify: this community is genuine. It's not a cult brainwashing people; I came in as a grown man by choice. And I've stayed because it works – our kids are safe, our souls are nourished. I've seen both worlds, and I choose this."
                     </blockquote>
                     <p>
@@ -176,11 +179,11 @@
             </section>
 
             <!-- Navigation -->
-            <div class="mt-8 pt-4 border-t flex justify-between">
-                 <a href="testimony-hezkiyahoo.html" class="text-blue-600 hover:underline font-semibold">&laquo; Previous Testimony: Prince Hezkiyahoo</a>
-                 <a href="testimonies.html" class="text-blue-600 hover:underline font-semibold">Return to Testimonies Overview &raquo;</a>
+            <div class="mt-8 pt-4 border-t border-gray-300 flex justify-between max-w-4xl mx-auto"> <!-- Constrain nav width -->
+                 <a href="testimony-hezkiyahoo.html" class="gold-text hover:underline font-semibold">&laquo; Previous Testimony: Prince Hezkiyahoo</a>
+                 <a href="testimonies.html" class="gold-text hover:underline font-semibold">Return to Testimonies Overview &raquo;</a>
             </div>
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

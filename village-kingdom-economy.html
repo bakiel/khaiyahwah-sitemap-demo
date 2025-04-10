@@ -27,9 +27,24 @@
             background-color: #f8f9fa; /* Light background for cards */
             padding: 1.5rem;
             border-radius: 8px;
-            border: 1px solid #eee;
+            /* border: 1px solid #eee; */ /* Remove border */
             margin-bottom: 1.5rem;
+            background-color: white; /* White background for cards */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+            color: var(--text-dark); /* Dark text */
         }
+        .enterprise-card h2 {
+            color: var(--gold); /* Gold heading */
+            margin-bottom: 0.75rem;
+        }
+        /* Adjustments for new theme */
+        body { background-color: var(--light-bg); color: var(--text-light); }
+        article { background-color: transparent; box-shadow: none; padding: 0; } /* Remove article background/shadow */
+        nav[aria-label="breadcrumb"] a { color: var(--gold); }
+        nav[aria-label="breadcrumb"] a:hover { text-decoration: underline; }
+        nav[aria-label="breadcrumb"] span { color: var(--text-dark); }
+        h1 { color: var(--dark-bg); }
+        p.text-lg { color: var(--text-dark); } /* Adjust intro paragraph color */
     </style>
 </head>
 <body>
@@ -61,62 +76,63 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-            <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+            <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
                 <!-- Need an overview page for Village later -->
-                <a href="#village-overview" class="hover:underline">The Village of Peace</a> >
-                <span class="font-semibold">Kingdom Economy</span>
+                <a href="#village-overview" class="gold-text hover:underline">The Village of Peace</a> >
+                <span class="font-semibold text-dark-bg">Kingdom Economy</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Kingdom Economy: Building Self-Sufficiency</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">Kingdom Economy: Building Self-Sufficiency</h1>
 
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                A fundamental principle of the Kingdom of Yah is self-sufficiency ("Do for Self"). The community strives to build a **Kingdom Economy** based on divine principles, sustainable practices, and collective well-being, rather than relying on external, often exploitative, economic systems.
+            <p class="text-lg text-dark-bg leading-relaxed mb-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
+                A fundamental principle of the Kingdom of Yah is self-sufficiency ("Do for Self"). The community strives to build a <strong>Kingdom Economy</strong> based on divine principles, sustainable practices, and collective well-being, rather than relying on external, often exploitative, economic systems.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"> <!-- Wider container for grid -->
                  <div class="enterprise-card">
-                    <h2 class="text-xl font-semibold text-blue-800 mb-3">Vegan Restaurants</h2>
+                    <h2 class="text-xl font-semibold mb-3">Vegan Restaurants</h2>
                     <div class="placeholder-image">[Image Placeholder: Taste of Life or Soul Vegetarian restaurant]</div>
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="leading-relaxed">
                         Pioneering establishments like "Taste of Life" in Israel and "Soul Vegetarian" abroad serve as both economic enterprises and ambassadors of Genesis Nutrition, offering healthy, plant-based cuisine to the public.
                     </p>
                 </div>
                  <div class="enterprise-card">
-                    <h2 class="text-xl font-semibold text-blue-800 mb-3">Artisan Workshops</h2>
+                    <h2 class="text-xl font-semibold mb-3">Artisan Workshops</h2>
                      <div class="placeholder-image">[Image Placeholder: Community members crafting textiles, jewelry, etc.]</div>
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="leading-relaxed">
                         Workshops producing textiles, natural body products, crafts, and other goods provide employment and generate income while preserving traditional skills and promoting natural living.
                     </p>
                 </div>
                  <div class="enterprise-card">
-                    <h2 class="text-xl font-semibold text-blue-800 mb-3">Wellness Center</h2>
+                    <h2 class="text-xl font-semibold mb-3">Wellness Center</h2>
                      <div class="placeholder-image">[Image Placeholder: Wellness center services or environment]</div>
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="leading-relaxed">
                         Offering services based on divine health principles, including nutritional counseling, herbal remedies, and other natural therapies, promoting holistic well-being within and beyond the community.
                     </p>
                 </div>
                  <div class="enterprise-card">
-                    <h2 class="text-xl font-semibold text-blue-800 mb-3">Sustainable Enterprises</h2>
+                    <h2 class="text-xl font-semibold mb-3">Sustainable Enterprises</h2>
                      <div class="placeholder-image">[Image Placeholder: Organic farming, construction, or other enterprise]</div>
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="leading-relaxed">
                         Ventures in organic farming, construction, music production, and other fields aim to build a diverse and resilient economy aligned with Kingdom values.
                     </p>
                 </div>
             </div>
 
-            <p class="text-gray-700 leading-relaxed mt-8">
+            <p class="text-dark-bg leading-relaxed mt-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
                 The Kingdom Economy focuses on creating a healthy, self-sustaining community, providing meaningful work for its members, and offering products and services that reflect divine principles to the wider world.
             </p>
 
              <!-- Navigation -->
-            <div class="mt-8 pt-4 border-t flex justify-between">
-                 <a href="village-community-institutions.html" class="text-blue-600 hover:underline font-semibold">&laquo; Previous: Community Institutions</a>
-                 <a href="village-daily-life.html" class="text-blue-600 hover:underline font-semibold">Next: Daily Life in the Village &raquo;</a>
+            <div class="mt-8 pt-4 border-t border-gray-300 flex justify-between max-w-4xl mx-auto"> <!-- Constrain nav width -->
+                 <a href="village-community-institutions.html" class="gold-text hover:underline font-semibold">&laquo; Previous: Community Institutions</a>
+                 <a href="village-daily-life.html" class="gold-text hover:underline font-semibold">Next: Daily Life in the Village &raquo;</a>
             </div>
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

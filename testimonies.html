@@ -29,49 +29,63 @@
         .testimony-link-card {
             display: flex;
             align-items: center;
-            background-color: #f8f9fa;
+            background-color: white; /* White background */
             padding: 1rem;
             border-radius: 8px;
-            border: 1px solid #eee;
+            /* border: 1px solid #eee; */ /* Remove border */
             margin-bottom: 1rem;
             transition: box-shadow 0.2s;
             text-decoration: none; /* Remove underline from link */
-            color: inherit; /* Inherit text color */
+            color: var(--text-dark); /* Dark text */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
         }
          .testimony-link-card:hover {
-             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-             background-color: #f1f5f9; /* Slight hover background */
+             box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+             /* background-color: #f1f5f9; */ /* Remove hover background change */
         }
         .testimony-link-card h3 {
             color: var(--gold); /* Use gold color from style.css */
+            margin-bottom: 0.25rem; /* Add small margin below heading */
+        }
+        .testimony-link-card p {
+            color: var(--text-grey); /* Grey text for description */
         }
         /* Adjustments for new theme */
         body { background-color: var(--light-bg); color: var(--text-light); }
-        article { background-color: white; color: var(--text-dark); }
+        article { background-color: transparent; box-shadow: none; padding: 0; } /* Remove article background/shadow */
         nav[aria-label="breadcrumb"] a { color: var(--gold); }
         nav[aria-label="breadcrumb"] a:hover { text-decoration: underline; }
         nav[aria-label="breadcrumb"] span { color: var(--text-dark); }
         h1 { color: var(--dark-bg); }
-        blockquote { color: #555; border-left-color: var(--gold); }
-        .cta-button { /* Assuming you might add this class */
+        blockquote { color: var(--text-grey); border-left-color: var(--gold); } /* Use quote class styling */
+        p.text-lg { color: var(--text-dark); } /* Adjust intro paragraph color */
+        .cta-button {
             background-color: var(--gold);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.375rem;
-            font-weight: 600;
+            color: white; /* White text on gold button */
+            padding: 0.75rem 1.5rem; /* py-3 px-6 */
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 600; /* font-semibold */
             display: inline-block;
             text-align: center;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            margin: 0.5rem;
         }
         .cta-button:hover {
-            opacity: 0.9;
+            background-color: var(--highlight);
+            color: var(--dark-bg);
         }
         .cta-secondary {
              background-color: transparent;
              color: var(--gold);
-             border: 1px solid var(--gold);
+             border: 2px solid var(--gold); /* Match outline-button */
         }
          .cta-secondary:hover {
-             background-color: rgba(197, 160, 89, 0.1); /* Light gold background on hover */
+             background-color: var(--gold);
+             color: var(--dark-bg);
+         }
+         .share-testimony-section h2 { /* Style the 'Share Your Testimony' heading */
+             color: var(--dark-bg);
          }
 
     </style>
@@ -106,30 +120,31 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-             <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <span class="font-semibold">Testimonies</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+             <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <span class="font-semibold text-dark-bg">Testimonies</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Voices of the Saints: Testimonies from the Kingdom</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">Voices of the Saints: Testimonies from the Kingdom</h1>
 
-             <blockquote class="text-lg italic text-center text-gray-600 my-6">
+             <blockquote class="quote text-lg italic text-center my-6 max-w-3xl mx-auto"> <!-- Use quote class -->
                 "Behold, I will bring them from the north country, and gather them from the coasts of the earth... a great company shall return thither." — Jeremiah 31:8
             </blockquote>
 
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            <p class="text-lg text-dark-bg leading-relaxed mb-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
                 The journey of the African Hebrew Israelites stands as one of the most remarkable fulfillments of biblical prophecy in modern times. Below are firsthand accounts from those who have lived this divine drama—Saints who experienced the exodus from America, the wilderness purification in Liberia, and the establishment of Yah's Kingdom in the Holy Land. These testimonies serve not only as historical documentation but as living witness to Yah's faithfulness in bringing His people home after centuries in exile.
             </p>
 
-            <div class="space-y-4">
+            <div class="space-y-4 max-w-4xl mx-auto"> <!-- Constrain width -->
                 <!-- Link Card for Prince Gavriel -->
                 <a href="testimony-gavriel.html" class="testimony-link-card">
                     <div class="placeholder-image">[Img]</div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-1">Prince Gavriel Ha Gadol</h3>
-                        <p class="text-gray-600">The Pioneer's Journey - Author of "The Impregnable People" and one of the first to arrive in Israel.</p>
+                        <h3 class="text-xl font-semibold">Prince Gavriel Ha Gadol</h3>
+                        <p>The Pioneer's Journey - Author of "The Impregnable People" and one of the first to arrive in Israel.</p>
                     </div>
                 </a>
 
@@ -137,8 +152,8 @@
                 <a href="testimony-tekia.html" class="testimony-link-card">
                     <div class="placeholder-image">[Img]</div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-1">Emah Tekia</h3>
-                        <p class="text-gray-600">Midwife of the Nation - Recounts the wilderness experience and the development of the House of Life.</p>
+                        <h3 class="text-xl font-semibold">Emah Tekia</h3>
+                        <p>Midwife of the Nation - Recounts the wilderness experience and the development of the House of Life.</p>
                     </div>
                 </a>
 
@@ -146,8 +161,8 @@
                 <a href="testimony-hezkiyahoo.html" class="testimony-link-card">
                     <div class="placeholder-image">[Img]</div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-1">Prince Hezkiyahoo</h3>
-                        <p class="text-gray-600">The Pathfinder - Describes facing legal challenges and contributing to Kingdom establishment.</p>
+                        <h3 class="text-xl font-semibold">Prince Hezkiyahoo</h3>
+                        <p>The Pathfinder - Describes facing legal challenges and contributing to Kingdom establishment.</p>
                     </div>
                 </a>
 
@@ -155,20 +170,19 @@
                  <a href="testimony-community.html" class="testimony-link-card">
                     <div class="placeholder-image">[Img]</div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-1">Community Testimonies</h3>
-                        <p class="text-gray-600">Perspectives from third-generation members, stories of transformation, and health testimonies.</p>
+                        <h3 class="text-xl font-semibold">Community Testimonies</h3>
+                        <p>Perspectives from third-generation members, stories of transformation, and health testimonies.</p>
                     </div>
                 </a>
                  <!-- Add more links as needed -->
             </div>
 
-             <div class="mt-12 text-center border-t pt-6">
-                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Share Your Testimony</h2>
-                <p class="text-gray-600 mb-4">Have you visited the Village of Peace? Has your life been touched by the message of the Kingdom? We invite you to share your testimony with us.</p>
+             <div class="mt-12 text-center border-t border-gray-300 pt-6 max-w-4xl mx-auto share-testimony-section"> <!-- Constrain width -->
+                <h2 class="text-2xl font-semibold mb-4">Share Your Testimony</h2>
+                <p class="grey-text mb-4">Have you visited the Village of Peace? Has your life been touched by the message of the Kingdom? We invite you to share your testimony with us.</p>
                 <a href="#submit-testimony" class="cta-button cta-secondary">Submit Your Testimony</a>
             </div>
-
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

@@ -25,13 +25,14 @@
         }
         /* Adjustments for new theme */
         body { background-color: var(--light-bg); color: var(--text-light); }
-        article { background-color: white; color: var(--text-dark); }
+        article { background-color: transparent; box-shadow: none; padding: 0; } /* Remove article background/shadow */
         nav[aria-label="breadcrumb"] a { color: var(--gold); }
         nav[aria-label="breadcrumb"] a:hover { text-decoration: underline; }
         nav[aria-label="breadcrumb"] span { color: var(--text-dark); }
         h1 { color: var(--dark-bg); }
-        h2 { color: var(--gold); } /* Make subheadings gold */
-        blockquote { color: #555; border-left-color: var(--gold); }
+        h2.subtitle { color: var(--gold); font-weight: 600; } /* Style subtitle */
+        blockquote { color: var(--text-grey); border-left-color: var(--gold); } /* Use quote class styling */
+        .content-body { color: var(--text-dark); } /* Ensure main text is dark */
     </style>
 </head>
 <body>
@@ -64,24 +65,25 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-            <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <a href="testimonies.html" class="hover:underline">Testimonies</a> >
-                <span class="font-semibold">Emah Tekia</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+            <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <a href="testimonies.html" class="gold-text hover:underline">Testimonies</a> >
+                <span class="font-semibold text-dark-bg">Emah Tekia</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">Emah Tekia</h1>
-             <h2 class="text-xl text-center text-blue-700 font-semibold mb-6 border-b pb-4">Midwife of the Nation</h2>
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-dark-bg mb-2">Emah Tekia</h1>
+             <h2 class="subtitle text-xl text-center mb-6 border-b pb-4">Midwife of the Nation</h2>
 
             <div class="placeholder-image">[Image Placeholder: Emah Tekia]</div>
 
-             <p class="text-gray-700 leading-relaxed mb-6 italic text-center">
+             <p class="text-dark-bg leading-relaxed mb-6 italic text-center max-w-3xl mx-auto"> <!-- Constrain width -->
                 Emah Tekia arrived in Israel in 1969 and became one of the first midwives in the community. She has delivered hundreds of babies in the House of Life and trained generations of Divine Healers.
             </p>
 
-            <div class="text-gray-700 leading-relaxed space-y-4">
+            <div class="content-body leading-relaxed space-y-4 max-w-4xl mx-auto"> <!-- Constrain width -->
                 <p>
                     "The wilderness of Liberia stripped away everything that connected us to Babylon. Through driver ants, venomous snakes, and torrential rains, we were purified—prepared for our divine purpose. Those who remained became truly impregnable in spirit."
                 </p>
@@ -91,7 +93,7 @@
                 <p>
                     "As a young woman, I was called to serve the community as a midwife. We had no formal medical training as understood by the Western world, but we had knowledge passed down through generations and divine guidance in how to assist women in childbirth."
                 </p>
-                 <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-6 text-lg">
+                 <blockquote class="quote my-6 text-lg"> <!-- Use quote class -->
                     "Humans are the only creatures who go to hospitals to deliver. Delivery is a natural thing. Our women eat according to the High Holy and Sacred Diet during pregnancy, their bodies are strong, and births happen as Yah intended—without drugs or unnecessary interventions."
                 </blockquote>
                  <p>
@@ -106,11 +108,11 @@
             </div>
 
             <!-- Navigation -->
-            <div class="mt-8 pt-4 border-t flex justify-between">
-                 <a href="testimony-gavriel.html" class="text-blue-600 hover:underline font-semibold">&laquo; Previous Testimony: Prince Gavriel</a>
-                 <a href="testimony-hezkiyahoo.html" class="text-blue-600 hover:underline font-semibold">Next Testimony: Prince Hezkiyahoo &raquo;</a>
+            <div class="mt-8 pt-4 border-t border-gray-300 flex justify-between max-w-4xl mx-auto"> <!-- Constrain nav width -->
+                 <a href="testimony-gavriel.html" class="gold-text hover:underline font-semibold">&laquo; Previous Testimony: Prince Gavriel</a>
+                 <a href="testimony-hezkiyahoo.html" class="gold-text hover:underline font-semibold">Next Testimony: Prince Hezkiyahoo &raquo;</a>
             </div>
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

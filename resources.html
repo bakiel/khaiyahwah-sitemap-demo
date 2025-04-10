@@ -75,40 +75,40 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-             <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <span class="font-semibold">Resources</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+             <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <span class="font-semibold text-dark-bg">Resources</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Resources</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">Resources</h1>
 
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            <p class="text-lg text-dark-bg leading-relaxed mb-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
                 Explore further insights into the Kingdom of Yah through our blog and frequently asked questions. Stay informed about community milestones, health perspectives, and spiritual reflections.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"> <!-- Constrain width -->
                 <!-- Kingdom Blog Card -->
                 <a href="blog.html" class="resource-card">
-                    <h2 class="text-2xl font-semibold mb-3">Kingdom Blog</h2>
-                    <p class="text-gray-600">
+                    <h2 class="text-2xl font-semibold">Kingdom Blog</h2>
+                    <p class="grey-text"> <!-- Use grey-text -->
                         Read articles and reflections on Holy Days, community milestones, health insights derived from Genesis Nutrition, and prophetic perspectives on current events.
                     </p>
-                    <span class="text-blue-600 font-semibold mt-4 inline-block">Visit the Blog &raquo;</span>
+                    <span>Visit the Blog &raquo;</span>
                 </a>
 
                 <!-- FAQ Card -->
                  <a href="faq.html" class="resource-card">
-                    <h2 class="text-2xl font-semibold mb-3">Frequently Asked Questions</h2>
-                    <p class="text-gray-600">
+                    <h2 class="text-2xl font-semibold">Frequently Asked Questions</h2>
+                    <p class="grey-text"> <!-- Use grey-text -->
                         Find answers to common questions about the Hebrew Israelite identity, the reasons for the exodus from America, the principles of Divine Nutrition, and details about daily life and spiritual practices within the community.
                     </p>
-                     <span class="text-blue-600 font-semibold mt-4 inline-block">Read the FAQ &raquo;</span>
+                     <span>Read the FAQ &raquo;</span>
                 </a>
             </div>
-
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

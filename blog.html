@@ -91,28 +91,29 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-             <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <a href="resources.html" class="hover:underline">Resources</a> >
-                <span class="font-semibold">Kingdom Blog</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+             <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <a href="resources.html" class="gold-text hover:underline">Resources</a> >
+                <span class="font-semibold text-dark-bg">Kingdom Blog</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Kingdom Blog</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">Kingdom Blog</h1>
 
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            <p class="text-lg text-dark-bg leading-relaxed mb-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
                 Stay connected with the latest insights, reflections, and news from the Kingdom of Yah. Explore articles on Holy Days, community milestones, health perspectives, and prophetic understanding.
             </p>
 
             <!-- Blog Post Listing Placeholder -->
-            <div class="space-y-6">
+            <div class="space-y-6 max-w-4xl mx-auto"> <!-- Constrain width -->
                 <!-- Example Blog Post Summary -->
                 <div class="blog-post-summary">
                     <div class="placeholder-image">[Blog Post Image Placeholder]</div>
-                    <h2 class="text-2xl font-semibold mt-4 mb-2">Placeholder Blog Post Title 1</h2>
-                    <p class="text-sm text-gray-500 mb-3">Date Published | Category (e.g., Holy Day Reflections)</p>
-                    <p class="text-gray-600">
+                    <h2 class="text-2xl font-semibold mb-2">Placeholder Blog Post Title 1</h2>
+                    <p class="text-sm grey-text mb-3">Date Published | Category (e.g., Holy Day Reflections)</p>
+                    <p class="grey-text"> <!-- Use grey-text -->
                         This is a brief summary or excerpt of the blog post content. It will give readers an idea of the topic discussed...
                     </p>
                     <a href="#" class="read-more">Read More &raquo;</a>
@@ -121,9 +122,9 @@
                  <!-- Example Blog Post Summary -->
                  <div class="blog-post-summary">
                     <div class="placeholder-image">[Blog Post Image Placeholder]</div>
-                    <h2 class="text-2xl font-semibold mt-4 mb-2">Placeholder Blog Post Title 2</h2>
-                    <p class="text-sm text-gray-500 mb-3">Date Published | Category (e.g., Health Insights)</p>
-                    <p class="text-gray-600">
+                    <h2 class="text-2xl font-semibold mb-2">Placeholder Blog Post Title 2</h2>
+                    <p class="text-sm grey-text mb-3">Date Published | Category (e.g., Health Insights)</p>
+                    <p class="grey-text"> <!-- Use grey-text -->
                         Another summary introducing the topic of the second blog post, perhaps discussing aspects of Genesis Nutrition or community wellness...
                     </p>
                      <a href="#" class="read-more">Read More &raquo;</a>
@@ -132,9 +133,9 @@
                  <!-- Example Blog Post Summary -->
                  <div class="blog-post-summary">
                     <div class="placeholder-image">[Blog Post Image Placeholder]</div>
-                    <h2 class="text-2xl font-semibold mt-4 mb-2">Placeholder Blog Post Title 3</h2>
-                    <p class="text-sm text-gray-500 mb-3">Date Published | Category (e.g., Community Milestones)</p>
-                    <p class="text-gray-600">
+                    <h2 class="text-2xl font-semibold mb-2">Placeholder Blog Post Title 3</h2>
+                    <p class="text-sm grey-text mb-3">Date Published | Category (e.g., Community Milestones)</p>
+                    <p class="grey-text"> <!-- Use grey-text -->
                         A summary detailing recent events, achievements, or developments within the Village of Peace or global jurisdictions...
                     </p>
                      <a href="#" class="read-more">Read More &raquo;</a>
@@ -143,12 +144,11 @@
             </div>
 
              <!-- Pagination Placeholder -->
-             <div class="mt-12 text-center pagination">
+             <div class="mt-12 text-center pagination max-w-4xl mx-auto"> <!-- Constrain width -->
                 <span class="mr-2">Page 1 of X</span>
                 <a href="#">Next Page &raquo;</a>
              </div>
-
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

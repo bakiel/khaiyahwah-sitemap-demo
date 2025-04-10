@@ -25,7 +25,7 @@
         }
         /* Adjustments for new theme */
         body { background-color: var(--light-bg); color: var(--text-light); }
-        article { background-color: white; color: var(--text-dark); }
+        article { background-color: transparent; box-shadow: none; padding: 0; } /* Remove article background/shadow */
         nav[aria-label="breadcrumb"] a { color: var(--gold); }
         nav[aria-label="breadcrumb"] a:hover { text-decoration: underline; }
         nav[aria-label="breadcrumb"] span { color: var(--text-dark); }
@@ -112,28 +112,29 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-             <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <span class="font-semibold">Connect</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+             <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <span class="font-semibold text-dark-bg">Connect</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Connect with the Kingdom</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">Connect with the Kingdom</h1>
 
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            <p class="text-lg text-dark-bg leading-relaxed mb-8 max-w-4xl mx-auto text-center"> <!-- Constrain width and center -->
                 We welcome inquiries, visits, and connections from individuals seeking to learn more about the Kingdom of Yah and the African Hebrew Israelite community.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"> <!-- Wider container for grid -->
                 <!-- Left Column: Contact Info, Visit Info, Locations -->
                 <div>
                     <section class="mb-8">
                         <h2 class="text-2xl font-semibold mb-3">Contact Information</h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-dark-bg leading-relaxed">
                             [Placeholder: Detailed contact information including phone numbers, email addresses, and mailing address for the main community center in Dimona will be placed here.]
                         </p>
-                        <p class="text-gray-700 leading-relaxed mt-2">
+                        <p class="text-dark-bg leading-relaxed mt-2">
                             Example: <br>
                             Phone: +972-X-XXX-XXXX <br>
                             Email: info@khaiyahwah.com <br>
@@ -143,17 +144,17 @@
 
                     <section class="mb-8">
                         <h2 class="text-2xl font-semibold mb-3">Visit Information</h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-dark-bg leading-relaxed">
                             [Placeholder: Guidelines and procedures for arranging visits to community centers in Dimona or other locations. Information about tours, accommodations (if available), and expectations for visitors will be detailed here.]
                         </p>
-                         <p class="text-gray-700 leading-relaxed mt-2">
+                         <p class="text-dark-bg leading-relaxed mt-2">
                             Example: Visits are welcome but must be arranged in advance. Please contact our visitor coordination office at [email/phone] for details and scheduling.
                         </p>
                     </section>
 
                     <section>
                         <h2 class="text-2xl font-semibold mb-3">International Locations</h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-dark-bg leading-relaxed">
                             [Placeholder: Information about affiliated community jurisdictions and centers around the world (e.g., USA, Ghana, South Africa). Addresses or contact details for these locations will be listed here.]
                         </p>
                          <div class="placeholder-map mt-4">[Placeholder: Interactive map showing global locations]</div>
@@ -164,7 +165,7 @@
                 <div>
                     <section class="newsletter-section p-6 rounded-lg border border-gray-200">
                         <h2 class="text-2xl font-semibold mb-4">Newsletter Signup</h2>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-dark-bg leading-relaxed mb-4">
                             Subscribe to our newsletter to receive updates on community news, events, blog posts, and new resources directly in your inbox.
                         </p>
                         <form action="#" method="POST"> <!-- Replace # with actual form handler URL -->
@@ -183,8 +184,7 @@
                     </section>
                 </div>
             </div>
-
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->

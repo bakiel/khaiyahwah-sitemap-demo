@@ -36,11 +36,15 @@
         }
         /* Adjustments for new theme */
         body { background-color: var(--light-bg); color: var(--text-light); }
-        article { background-color: white; color: var(--text-dark); }
+        article { background-color: transparent; box-shadow: none; padding: 0; } /* Remove article background/shadow */
         nav[aria-label="breadcrumb"] a { color: var(--gold); }
         nav[aria-label="breadcrumb"] a:hover { text-decoration: underline; }
         nav[aria-label="breadcrumb"] span { color: var(--text-dark); }
         h1 { color: var(--dark-bg); }
+        .faq-answer {
+            /* display: none; */ /* Keep answers visible for now, JS will handle toggle */
+            padding-top: 0.5rem; /* Add some space above answer */
+        }
     </style>
 </head>
 <body>
@@ -73,17 +77,18 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-8 px-4">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-             <nav aria-label="breadcrumb" class="text-sm text-gray-600 mb-4">
-                <a href="index.html" class="hover:underline">Home</a> >
-                <a href="resources.html" class="hover:underline">Resources</a> >
-                <span class="font-semibold">Frequently Asked Questions</span>
+    <!-- Apply light-section style directly to main or a section inside -->
+    <main class="light-section py-16 px-4">
+        <div class="container mx-auto"> <!-- Add container for content width -->
+             <nav aria-label="breadcrumb" class="text-sm grey-text mb-4">
+                <a href="index.html" class="gold-text hover:underline">Home</a> >
+                <a href="resources.html" class="gold-text hover:underline">Resources</a> >
+                <span class="font-semibold text-dark-bg">Frequently Asked Questions</span>
             </nav>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Frequently Asked Questions (FAQ)</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-dark-bg mb-6 border-b pb-4 text-center">Frequently Asked Questions (FAQ)</h1>
 
-            <div class="space-y-6" id="faq-accordion"> <!-- Added ID for potential JS targeting -->
+            <div class="space-y-6 max-w-4xl mx-auto" id="faq-accordion"> <!-- Constrain width -->
                 <!-- FAQ Item 1 -->
                 <div class="faq-item">
                     <h2 class="faq-question text-xl">
@@ -129,8 +134,7 @@
                 </div>
                  <!-- Add more FAQ items if provided -->
             </div>
-
-        </article>
+        </div> <!-- Close container -->
     </main>
 
     <!-- Footer -->
