@@ -25,18 +25,26 @@
 </head>
 <body class="bg-gray-100">
 
-    <!-- Header Placeholder -->
+    <!-- Consistent Header -->
     <header class="bg-blue-800 text-white p-4 sticky top-0 z-50 shadow-md">
-        <nav class="container mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold">KhaiYahwah.com</div>
-            <div>
-                <!-- Navigation Links Placeholder -->
-                <a href="index.html" class="px-2 hover:text-gray-300">Home</a>
-                <a href="journey-overview.html" class="px-2 hover:text-gray-300 font-semibold">Our Journey</a>
-                <a href="#principles" class="px-2 hover:text-gray-300">Principles</a>
-                <a href="store.html" class="px-2 hover:text-gray-300">Store</a>
-                <a href="#connect" class="px-2 hover:text-gray-300">Connect</a>
-                <!-- Add other main nav links later -->
+        <nav class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="index.html" class="text-xl font-bold hover:text-gray-300">KhaiYahwah.com</a>
+            <!-- Mobile Menu Button (hidden on large screens) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded hover:bg-blue-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <!-- Navigation Links -->
+            <div id="main-nav" class="hidden md:flex md:items-center w-full md:w-auto mt-2 md:mt-0">
+                <a href="index.html" class="block md:inline-block px-3 py-2 hover:text-gray-300">Home</a>
+                <a href="journey-overview.html" class="block md:inline-block px-3 py-2 hover:text-gray-300 font-semibold">Our Journey</a> <!-- Highlight current section -->
+                <a href="#principles-overview" class="block md:inline-block px-3 py-2 hover:text-gray-300">Principles</a>
+                <a href="#holydays-overview" class="block md:inline-block px-3 py-2 hover:text-gray-300">Holy Days</a>
+                <a href="#village-overview" class="block md:inline-block px-3 py-2 hover:text-gray-300">Village of Peace</a>
+                <a href="testimonies.html" class="block md:inline-block px-3 py-2 hover:text-gray-300">Testimonies</a>
+                <a href="books.html" class="block md:inline-block px-3 py-2 hover:text-gray-300">The Books</a>
+                <a href="resources.html" class="block md:inline-block px-3 py-2 hover:text-gray-300">Resources</a>
+                <a href="store.html" class="block md:inline-block px-3 py-2 hover:text-gray-300">Store</a>
+                <a href="connect.html" class="block md:inline-block px-3 py-2 hover:text-gray-300">Connect</a>
             </div>
         </nav>
     </header>
@@ -77,19 +85,23 @@
         </article>
     </main>
 
-    <!-- Footer Placeholder -->
+    <!-- Consistent Footer -->
     <footer class="bg-gray-800 text-gray-400 p-6 mt-12">
         <div class="container mx-auto text-center">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> KhaiYahwah.com. All rights reserved.</p>
-            <!-- Footer Navigation Placeholder -->
-            <div class="mt-2">
-                <a href="#" class="px-2 hover:text-white">About Us</a> |
-                <a href="#" class="px-2 hover:text-white">FAQ</a> |
-                <a href="#" class="px-2 hover:text-white">Contact</a> |
-                <a href="#" class="px-2 hover:text-white">Privacy Policy</a>
+             <!-- Footer Navigation -->
+            <div class="mb-4">
+                <a href="#about" class="px-2 hover:text-white">About Us</a> | <!-- Placeholder link -->
+                <a href="faq.html" class="px-2 hover:text-white">FAQ</a> |
+                <a href="connect.html" class="px-2 hover:text-white">Contact</a> |
+                <a href="#privacy" class="px-2 hover:text-white">Privacy Policy</a> | <!-- Placeholder link -->
+                <a href="#terms" class="px-2 hover:text-white">Terms of Use</a> | <!-- Placeholder link -->
+                 <a href="connect.html#newsletter" class="px-2 hover:text-white">Newsletter Signup</a>
             </div>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> KhaiYahwah.com. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Inline script removed, logic is in scripts.js -->
+    <script src="scripts.js"></script>
 </body>
 </html>

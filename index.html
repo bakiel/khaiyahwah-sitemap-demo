@@ -3,157 +3,897 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KhaiYahwah.com - Yah's Covenant Fulfilled</title>
+    <title>Khai Yahwah - The Covenant Fulfilled</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Placeholder style */
-        .placeholder-image {
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #757575;
-            font-style: italic;
-            text-align: center;
-            border: 1px dashed #bdbdbd;
-            min-height: 300px; /* Adjust as needed for hero */
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-        .placeholder-timeline {
-            background-color: #f0f0f0;
-            border: 1px dashed #ccc;
-            padding: 2rem;
-            text-align: center;
-            color: #888;
-            font-style: italic;
-            min-height: 150px;
-        }
-        /* Basic button styling */
-        .cta-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            margin: 0.5rem;
-            border-radius: 0.375rem; /* rounded-md */
-            font-weight: 600; /* font-semibold */
-            text-transform: uppercase;
-            transition: background-color 0.2s;
-        }
-        .cta-primary {
-            background-color: #4a6da7; /* main blue */
-            color: white;
-        }
-        .cta-primary:hover {
-            background-color: #3b5687;
-        }
-        .cta-secondary {
-            background-color: #c9aa88; /* gold */
-            color: #333;
-        }
-         .cta-secondary:hover {
-            background-color: #b89977;
-        }
-    </style>
 </head>
-<body class="bg-gray-100">
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 flex flex-wrap items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3">
+                <!-- Removed SVG Logo -->
+                <span class="logo-text text-2xl font-bold">Khai Yahwah</span>
+            </a>
 
-    <!-- Header Placeholder -->
-    <header class="bg-blue-800 text-white p-4 sticky top-0 z-50 shadow-md">
-        <nav class="container mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold">KhaiYahwah.com</div>
-            <div>
-                <!-- Navigation Links Placeholder -->
-                <a href="index.html" class="px-2 hover:text-gray-300 font-semibold">Home</a>
-                <a href="#journey" class="px-2 hover:text-gray-300">Our Journey</a>
-                <a href="#principles" class="px-2 hover:text-gray-300">Principles</a>
-                <a href="#store" class="px-2 hover:text-gray-300">Store</a>
-                <a href="#connect" class="px-2 hover:text-gray-300">Connect</a>
-                <!-- Add other main nav links later -->
+            <button id="mobile-menu-button" class="md:hidden block text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <div id="nav-menu" class="hidden md:flex w-full md:w-auto md:items-center">
+                <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+                    <li><a href="#home" class="nav-link active-nav block py-2 md:py-0">Home</a></li>
+                    <li><a href="#journey" class="nav-link block py-2 md:py-0">Our Journey</a></li>
+                    <li><a href="#principles" class="nav-link block py-2 md:py-0">Kingdom Principles</a></li>
+                    <li><a href="#holy-days" class="nav-link block py-2 md:py-0">Holy Days</a></li>
+                    <li><a href="#village" class="nav-link block py-2 md:py-0">Village of Peace</a></li>
+                    <li><a href="#books" class="nav-link block py-2 md:py-0">Books</a></li>
+                    <li><a href="#connect" class="nav-link block py-2 md:py-0">Connect</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative text-center py-16 md:py-24 bg-gray-200">
-             <div class="absolute inset-0 placeholder-image opacity-30">[Background Image Placeholder: Village of Peace]</div>
-             <div class="relative container mx-auto px-4 z-10">
-                <p class="text-lg md:text-xl text-gray-700 mb-4 italic">
-                    "And in the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed... and it shall stand for ever." — Daniel 2:44
-                </p>
-                <h1 class="text-4xl md:text-6xl font-bold text-blue-900 mb-3">YAH KHAI!</h1>
-                <h2 class="text-3xl md:text-5xl font-semibold text-blue-800 mb-6">The Covenant Fulfilled</h2>
-                <p class="text-xl md:text-2xl text-gray-800 mb-8 max-w-3xl mx-auto">
-                    We stand as living testimony—African Hebrew Israelites returned to the Promised Land after centuries in captivity, precisely as the prophets foretold.
-                </p>
-                <div>
-                    <a href="#journey-overview" class="cta-button cta-primary">Witness The Journey</a>
-                    <a href="author-profile.html" class="cta-button cta-secondary">Obtain The Testimony</a>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="dark-section py-20 px-4">
+        <div class="container mx-auto text-center">
+            <p class="text-sm md:text-base italic mb-4 text-gray-400">
+                "And in the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed: and the kingdom shall not be left to other people, but it shall break in pieces and consume all these kingdoms, and it shall stand for ever."<br>
+                — Daniel 2:44
+            </p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">YAH <span class="gold-text">KHAI!</span> The Covenant Fulfilled</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">
+                We stand as living testimony—African Hebrew Israelites returned to the Promised Land after centuries in captivity, precisely as the prophets foretold. Under divine guidance, we have established Yah's Kingdom on earth at Jerusalem, not as metaphor but as tangible reality.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#journey" class="gold-button py-3 px-6 rounded-md font-semibold w-full md:w-auto">WITNESS THE JOURNEY</a>
+                <a href="#books" class="outline-button py-3 px-6 rounded-md font-semibold w-full md:w-auto">OBTAIN THE TESTIMONY</a>
             </div>
-        </section>
 
-        <!-- Brief Introduction -->
-        <section class="container mx-auto py-12 md:py-16 px-4">
-             <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Prophetic Journey Home</h2>
-             <div class="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-4">
-                <p>
+            <div class="mt-16 max-w-4xl mx-auto bg-black bg-opacity-30 p-6 rounded-lg">
+                <p class="mb-4">
                     For centuries, the children of Israel languished in spiritual death, scattered to the four corners of the earth as foretold by the prophets. Stripped of identity, disconnected from heritage, and bound in mental captivity, we endured the curses described in Deuteronomy 28—the bitter fruit of disobedience. Yet even in our darkest hour, Yah never abandoned His covenant.
                 </p>
-                <p>
+                <p class="mb-4">
                     In February 1966, the Angel Gabriel appeared to H.E. Ben Ammi with divine instructions: "It is time to start the journey back to the promised land and to establish the long awaited kingdom of God that had been prophesied by Daniel the prophet in the second chapter and the 44th verse. And the year of the Exodus will be 1967."
                 </p>
                 <p>
-                    This 45-second vision ignited a flame that would lead hundreds from America to Liberia and finally to the Holy Land—fulfilling the prophetic timeline with remarkable precision. After nearly 400 years in captivity, the children of Israel have returned home, establishing Yah's Kingdom on earth not as metaphor but as tangible reality in the Village of Peace.
+                    This 45-second vision ignited a flame that would lead hundreds from America to Liberia and finally to the Holy Land—fulfilling the prophetic timeline with remarkable precision. After nearly 400 years in captivity, the children of Israel have returned home.
                 </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Book/Audiobook Promotion -->
-        <section class="bg-blue-50 py-12 md:py-16 px-4">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Experience the Complete Testimony</h2>
-                 <blockquote class="max-w-3xl mx-auto italic text-gray-600 mb-6">
-                    "The Impregnable People chronicles our exodus from spiritual death in America through the wilderness of Liberia to the establishment of Yah's Kingdom in the Holy Land. This is not merely history—it is prophecy fulfilled before your eyes."<br>
-                    — Prince Gavriel Ha Gadol, Author
-                </blockquote>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
-                    <div class="placeholder-image w-full md:w-1/3 min-h-[250px]">[Image Placeholder: Book Cover - Part 1]</div>
-                    <div class="placeholder-image w-full md:w-1/3 min-h-[250px]">[Image Placeholder: Book Cover - Part 2]</div>
-                </div>
-                <div>
-                     <a href="#store-books" class="cta-button cta-secondary">Obtain The Books</a>
-                     <a href="#store-audiobook" class="cta-button cta-secondary">Hear The Audiobook</a>
+    <!-- Timeline Overview -->
+    <section class="light-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Prophetic Timeline</h2>
+
+            <div class="scroll-container pb-4">
+                <div class="flex space-x-6 min-w-max">
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1966</span>
+                        <h3 class="font-semibold text-lg mb-2">The Divine Vision</h3>
+                        <p class="text-sm grey-text">H.E. Ben Ammi receives vision from Angel Gabriel</p>
+                    </div>
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1967</span>
+                        <h3 class="font-semibold text-lg mb-2">The Exodus Begins</h3>
+                        <p class="text-sm grey-text">400 Saints depart America for Liberia</p>
+                    </div>
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1967-1969</span>
+                        <h3 class="font-semibold text-lg mb-2">Wilderness Purification</h3>
+                        <p class="text-sm grey-text">Spiritual refining in Liberian wilderness</p>
+                    </div>
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1969-1970</span>
+                        <h3 class="font-semibold text-lg mb-2">Return to Promised Land</h3>
+                        <p class="text-sm grey-text">First arrivals in Israel (August 1969)</p>
+                    </div>
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1971</span>
+                        <h3 class="font-semibold text-lg mb-2">Mountain of Life</h3>
+                        <p class="text-sm grey-text">Divine Council established, 12 Princes appointed</p>
+                    </div>
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1973-1986</span>
+                        <h3 class="font-semibold text-lg mb-2">Test of Patience</h3>
+                        <p class="text-sm grey-text">Legal challenges and opposition</p>
+                    </div>
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1986</span>
+                        <h3 class="font-semibold text-lg mb-2">Great Show of Strength</h3>
+                        <p class="text-sm grey-text">Passover confrontation, spiritual victory</p>
+                    </div>
+                    <div class="timeline-circle w-56 p-6 bg-white shadow-md rounded-lg text-center">
+                        <span class="timeline-year block text-xl mb-2">1990</span>
+                        <h3 class="font-semibold text-lg mb-2">Covenant Remembered</h3>
+                        <p class="text-sm grey-text">Legal recognition in Israel after 20 years</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Prophetic Timeline -->
-         <section class="container mx-auto py-12 md:py-16 px-4">
-             <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Prophetic Timeline Highlights</h2>
-             <div class="placeholder-timeline">
-                [Visual Timeline Placeholder: Key dates like 1966 (Vision), 1967 (Exodus), 1969 (Arrival in Israel), 1971 (Mountain of Life), 1990 (Recognition) will be displayed here visually later.]
-                <br><br>
-                Key Dates: 1966 (Vision) -> 1967 (Exodus Begins) -> 1969 (Arrival in Israel) -> 1971 (Mountain of Life) -> 1990 (Covenant Remembered)
-             </div>
-         </section>
+    <!-- Book Promotion -->
+    <section class="dark-section py-16 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">EXPERIENCE THE COMPLETE TESTIMONY</h2>
+                    <p class="text-xl italic mb-6">
+                        "The Impregnable People chronicles our exodus from spiritual death in America through the wilderness of Liberia to the establishment of Yah's Kingdom in the Holy Land. This is not merely history—it is prophecy fulfilled before your eyes."
+                    </p>
+                    <p class="mb-8">— Prince Gavriel Ha Gadol, Author</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#books" class="gold-button py-3 px-6 rounded-md font-semibold text-center">OBTAIN THE BOOKS</a>
+                        <a href="#audiobook" class="outline-button py-3 px-6 rounded-md font-semibold text-center">HEAR THE AUDIOBOOK</a>
+                    </div>
+                </div>
+                <div class="md:w-5/12">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full bg-gold opacity-20 rounded-md"></div>
+                        <div class="relative bg-gray-800 p-8 rounded-md">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-40 h-56 bg-gray-700 rounded-md relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <span class="logo-text text-lg">The Impregnable People</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold mb-2">The Impregnable People</h3>
+                                <p class="text-sm text-gray-400 mb-4">Chronicle of the African Hebrew Israelites</p>
+                                <a href="#books" class="inline-block gold-button py-2 px-4 rounded text-sm">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <!-- Our Journey Section -->
+    <section id="journey" class="light-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Our Journey</h2>
+            <p class="text-center max-w-3xl mx-auto mb-16 text-lg grey-text">
+                The prophetic return of the children of Israel to the Promised Land after centuries in captivity, precisely as foretold by the prophets.
+            </p>
 
-    <!-- Footer Placeholder -->
-    <footer class="bg-gray-800 text-gray-400 p-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> KhaiYahwah.com. All rights reserved.</p>
-            <!-- Footer Navigation Placeholder -->
-            <div class="mt-2">
-                <a href="#" class="px-2 hover:text-white">About Us</a> |
-                <a href="#" class="px-2 hover:text-white">FAQ</a> |
-                <a href="#" class="px-2 hover:text-white">Contact</a> |
-                <a href="#" class="px-2 hover:text-white">Privacy Policy</a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-bold mb-2">The Divine Vision (1966)</h3>
+                        <p class="mb-4">
+                            In February 1966, as H.E. Ben Ammi lay deeply troubled by the predicament of his people in America, the Angel Gabriel appeared with a divine message that would change history:
+                        </p>
+                        <div class="quote mb-4">
+                            <p>"It is time to start the journey back to the promised land and to establish the long awaited kingdom of God that had been prophesied by Daniel the prophet in the second chapter and the 44th verse. And the year of the Exodus will be 1967."</p>
+                        </div>
+                        <p class="mb-4">
+                            This 45-second vision contained the blueprint for liberation—a divine mandate to return to the Holy Land and establish Yah's Kingdom on earth. It came at a pivotal moment when social upheaval was sweeping across America, with riots erupting in cities nationwide.
+                        </p>
+                        <p>
+                            When a massive snowstorm blanketed Chicago in January 1967, H.E. Ben Ammi saw it as divine confirmation: "As I walked out of my home on that morning, it appeared as if the entire world stood still, for all of the great awesome power of the Gentiles had been brought to naught by an accumulation of little snowflakes."
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-bold mb-2">The Exodus Begins (1967)</h3>
+                        <p class="mb-4">
+                            In April 1967, approximately 400 Hebrew Israelites departed America for Liberia, marking the beginning of their prophetic exodus. This departure occurred almost exactly 400 years after the first Africans were brought to American shores in 1619, fulfilling the biblical timeline of captivity.
+                        </p>
+                        <p>
+                            Led by H.E. Ben Ammi, these pioneers left behind comfort, possessions, and familiarity to follow divine guidance. They sold homes, quit jobs, and said goodbye to loved ones, believing wholeheartedly in the vision of returning to their ancestral homeland.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-bold mb-2">Wilderness Purification (1967-1969)</h3>
+                        <p class="mb-4">
+                            The Liberian wilderness served as a crucible for spiritual purification, testing the resolve of the Hebrew Israelites through extreme physical challenges. They faced venomous snakes, torrential monsoon rains, tropical diseases, and the difficult transition from urban American life to subsistence farming.
+                        </p>
+                        <p>
+                            These hardships served a divine purpose—to burn away the "mentality of Babylon" and prepare the Saints for their ultimate destination in the Holy Land. Many who began the journey turned back, unable to endure these trials, but those who persevered emerged spiritually strengthened and unified.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-bold mb-2">Return to the Promised Land (1969-1970)</h3>
+                        <p class="mb-4">
+                            On August 19, 1969, Prince Gavriel, along with Emah Tekia and their son Benainu, became the first family to immigrate from Liberia to Israel. This historic arrival marked the beginning of the prophetic return that would bring thousands of Hebrew Israelites back to the land of their ancestors after nearly 2,000 years of exile.
+                        </p>
+                        <p class="mb-4">
+                            The early settlers established themselves first in Arad before expanding to Dimona and Mitzpeh Ramon. Despite limited resources and an uncertain welcome, these pioneers laid the foundation for what would become a thriving community.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-bold mb-2">The Mountain of Life (1971)</h3>
+                        <p class="mb-4">
+                            On October 24, 1971, as the sun rose over the Judean hills, the Saints gathered on what would become known as Har Kayeem (Mountain of Life) in Dimona. This historic assembly marked the establishment of divine governance in the Holy Land—the first true expression of righteous leadership on earth in nearly 2,000 years.
+                        </p>
+                        <p class="mb-4">
+                            Following the pattern established by Moses under Jethro's counsel (Exodus 18), H.E. Ben Ammi appointed twelve Princes to form the Divine Council. Each Prince received a spiritual title reflecting their divine purpose, creating the governance structure that would guide the community through the challenges ahead.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-bold mb-2">The Test of Patience (1973-1986)</h3>
+                        <p class="mb-4">
+                            For many years, the community faced significant legal challenges regarding their status in Israel. Many Saints experienced deportations, employment difficulties, and the constant pressure of building a new society in an unwelcoming environment.
+                        </p>
+                        <p class="mb-4">
+                            Despite these obstacles, the community remained focused on establishing their Kingdom institutions—the House of Life, Kingdom School in Holiness, and various self-sustaining enterprises. They maintained their distinctive cultural practices, Genesis Nutrition, and spiritual observances despite external pressure.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-bold mb-2">Covenant Remembered (1990)</h3>
+                        <p class="mb-4">
+                            In 1990, after exactly twenty years—a biblically significant period of testing—the Israeli government granted our community members B-1 work visas, beginning the process of legal recognition. This breakthrough came through persistent diplomacy, growing recognition of our positive contributions to Israeli society, and ultimately, divine timing in fulfillment of prophecy.
+                        </p>
+                        <p class="mb-4">
+                            Today, thousands of Saints live in Israel with permanent residency or citizenship, raising the third and fourth generations in the Kingdom way of life—living proof that Yah's word does not return void.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kingdom Principles -->
+    <section id="principles" class="dark-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Kingdom Principles</h2>
+            <p class="text-center max-w-3xl mx-auto mb-16 text-lg text-gray-300">
+                The foundation of righteous living and divine governance, offering an alternative to corrupted worldly systems.
+            </p>
+
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="h-full bg-black bg-opacity-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4 gold-text">Divine Nutrition</h3>
+                        <p class="mb-4 text-gray-300">
+                            "Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat." —Genesis 1:29
+                        </p>
+                        <p class="mb-4">
+                            In 1971, the African Hebrew Israelite community embraced a revelation that would transform our physical and spiritual wellbeing—a return to the original diet prescribed by Yah in Genesis. This preventative and regenerative approach has eliminated common diseases and created generations of vibrant, healthy Saints.
+                        </p>
+                        <p class="mb-4">
+                            Our Genesis Nutrition system focuses not merely on treating illness but on preventing disease through living foods that regenerate the body at the cellular level. Unlike the Western "death-style" that degenerates health over time, our plant-based approach actively restores vitality, reverses damage, and maintains optimal function throughout life.
+                        </p>
+                        <p>
+                            Through decades of implementation, we've witnessed remarkable health transformations, including children born and raised in the community who have never experienced common Western diseases and elders who maintain active, vibrant lifestyles well into their golden years.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="h-full bg-black bg-opacity-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4 gold-text">The Divine Council</h3>
+                        <p class="mb-4">
+                            On October 24, 1971, the establishment of the Divine Council marked the return of righteous governance on earth. Following the pattern established by Moses under Jethro's counsel (Exodus 18), H.E. Ben Ammi appointed twelve Princes to form the Divine Council.
+                        </p>
+                        <p class="mb-4">
+                            Each Prince received a spiritual title reflecting their divine purpose:
+                        </p>
+                        <ul class="list-disc list-inside mb-4 space-y-1">
+                            <li>Prince Rockameem – Prince of Mercy</li>
+                            <li>Prince Gavriel "Gadol" – Prince of Love</li>
+                            <li>Prince Hezkiyahoo – Prince of Patience</li>
+                            <li>Prince Eliezer – Elder Prince and Priest, Prince of Wisdom</li>
+                            <li>And eight others with distinct spiritual purposes</li>
+                        </ul>
+                        <p>
+                            Unlike the corrupted governments of the world, the Divine Council operates according to principles of righteousness, transparency, and spiritual insight, fulfilling the prophecy of Isaiah 1:26: "And I will restore thy judges as at the first, and thy counsellors as at the beginning."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="h-full bg-black bg-opacity-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4 gold-text">Kingdom Education</h3>
+                        <p class="mb-4">
+                            The Kingdom School in Holiness serves as the educational foundation for our community, preserving young minds from the corrupting influences of worldly education systems. Our approach integrates spiritual formation with academic excellence, teaching children not just what to think but how to think righteously.
+                        </p>
+                        <p class="mb-4">
+                            Young Saints receive instruction in Hebrew language and culture, Kingdom principles, and practical skills alongside traditional academic subjects. This holistic approach ensures they develop both intellectual capacity and spiritual discernment.
+                        </p>
+                        <p>
+                            Our educational philosophy recognizes that true knowledge begins with the fear of Yah and that wisdom comes through aligning our understanding with divine principles rather than corrupted human paradigms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="h-full bg-black bg-opacity-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4 gold-text">Divine Marriage</h3>
+                        <p class="mb-4">
+                            Marriage in the Kingdom transcends mere social convention, serving as a sacred covenant relationship with profound spiritual purpose. Our marriages are built on complementary roles, mutual respect, and shared commitment to establishing Yah's righteousness on earth.
+                        </p>
+                        <p class="mb-4">
+                            Unlike the degraded concept of marriage prevalent in Western society, Kingdom marriages focus on spiritual harmony, righteous child-rearing, and the advancement of the community. Every household serves as a microcosm of the Kingdom itself, with clear structure and purpose.
+                        </p>
+                        <p>
+                            Through strong marriages and family units, we ensure the preservation and transmission of our heritage, values, and spiritual understanding to future generations, maintaining the covenant across time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Holy Days Section -->
+    <section id="holy-days" class="light-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Holy Days & Celebrations</h2>
+            <p class="text-center max-w-3xl mx-auto mb-16 text-lg grey-text">
+                Sacred observances that connect us to our heritage and to Yah's divine calendar.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-1 bg-gold"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">The Sabbath (Shabbat)</h3>
+                        <p class="text-sm grey-text mb-4">Weekly observance (sunset Friday to sunset Saturday)</p>
+                        <p class="mb-4">
+                            The Sabbath (Shabbat) stands as the most honored of the High Holy Days, a day of spiritual communion with Yah through fasting, meditation, and sanctification. From sunset Friday to sunset Saturday, the Saints enter a sacred time set apart from worldly concerns.
+                        </p>
+                        <p>
+                            Unlike the surrounding society that treats Sabbath as a feast day, we observe it with fasting from food and water, following the example of ancient prophets. During this holy time, all nourishment comes from spiritual sustenance, not physical food.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-1 bg-gold"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Passover (Pessach)</h3>
+                        <p class="text-sm grey-text mb-4">Commemorating ancient and modern exodus</p>
+                        <p class="mb-4">
+                            Passover commemorates both the ancient deliverance from Egyptian bondage and our modern exodus from America in 1967. This powerful observance connects past and present, reminding us of Yah's consistent work of liberation across generations.
+                        </p>
+                        <p>
+                            Our Passover celebration includes a ceremonial meal, recounting of the exodus story, and special prayers. We recognize that just as Yah passed over the houses of Israel in ancient times, He has preserved us through our modern journey from captivity to freedom.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-1 bg-gold"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Day of Atonement (Yom Kippur)</h3>
+                        <p class="text-sm grey-text mb-4">Most solemn observance, 24-hour complete fast</p>
+                        <p class="mb-4">
+                            The Day of Atonement stands as our most solemn holy day, a time of deep spiritual reflection, repentance, and renewal. For a full 24 hours, we abstain completely from food and water, focusing our entire being on spiritual cleansing and reconciliation with Yah.
+                        </p>
+                        <p>
+                            This sacred day includes extended prayer, confession of sins (both individual and collective), and commitment to walking more perfectly in Yah's ways. It serves as an annual spiritual reset, allowing us to enter the new year with renewed purpose and purified hearts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-1 bg-gold"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Feast of Tabernacles (Sukkhote)</h3>
+                        <p class="text-sm grey-text mb-4">Commemorating wilderness experience</p>
+                        <p class="mb-4">
+                            The Feast of Tabernacles connects us to both the ancient Israelites' wilderness journey and our own community's experience in Liberia. During this festival, we construct temporary dwellings (sukkahs) and spend time in them, remembering the transient nature of our wilderness experience.
+                        </p>
+                        <p>
+                            This joyous celebration includes community gatherings, special meals, music, and pilgrimage to Jerusalem. It serves as a powerful reminder that Yah sustains His people even in the most challenging circumstances.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-1 bg-gold"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Kingdom Celebrations</h3>
+                        <p class="text-sm grey-text mb-4">New World Passover, Day of Appreciation</p>
+                        <p class="mb-4">
+                            Beyond the traditional Hebrew holy days, we observe celebrations unique to our community's journey and establishment. These include New World Passover (commemorating our exodus from America), the Day of Appreciation (honoring our elders and pioneers), and National Vegan Day.
+                        </p>
+                        <p>
+                            These Kingdom celebrations strengthen our identity as a community and provide regular opportunities to honor our history, express gratitude, and reaffirm our commitment to Yah's Kingdom on earth.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-1 bg-gold"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Preventive Health Observances</h3>
+                        <p class="text-sm grey-text mb-4">No Salt Days, Live Food Week, Sugarless Week</p>
+                        <p class="mb-4">
+                            Our community observes regular health practices that align with our Genesis Nutrition principles. These include No Salt Days, Live Food Day/Week, and Sugarless Week, which serve both physical and spiritual purposes.
+                        </p>
+                        <p>
+                            These observances help cleanse the body, reset nutritional patterns, and reinforce our commitment to prevention rather than treatment. They also serve as reminders that physical discipline contributes to spiritual clarity and receptivity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village of Peace -->
+    <section id="village" class="dark-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">The Village of Peace</h2>
+            <p class="text-center max-w-3xl mx-auto mb-16 text-lg text-gray-300">
+                The physical manifestation of Yah's Kingdom on earth, where prophetic vision has become tangible reality.
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold mb-4 gold-text">Divine Transformation</h3>
+                    <p class="mb-4">
+                        "And they shall build the old wastes, they shall raise up the former desolations, and they shall repair the waste cities, the desolations of many generations." —Isaiah 61:4
+                    </p>
+                    <p class="mb-4">
+                        What began as abandoned, dilapidated buildings in 1980 has been transformed into a thriving sanctuary of righteousness through the vision, labor, and divine guidance of the African Hebrew Israelites. The Village of Peace in Dimona stands as physical testimony that Yah's Kingdom is not merely spiritual concept but tangible reality.
+                    </p>
+                    <p>
+                        In 1980, Dimona's mayor Jack Amir, recognizing the overcrowded conditions of our community in the Shikun (apartment complex), offered us an abandoned Absorption Center originally built for Russian immigrants. These neglected structures had been ransacked, vandalized, and partially burned—considered worthless by the surrounding society.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                        <span class="text-2xl text-gray-500">Village of Peace</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 gold-text">The House of Life (Beit Khyeem)</h3>
+                    <p class="mb-4">
+                        Our natural birthing center where thousands of babies have been born through natural methods, overseen by trained Divine Healers. The exceptional outcomes—healthy mothers and babies with virtually no complications—stand as testimony to the effectiveness of Genesis Nutrition and divine health practices.
+                    </p>
+                </div>
+
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 gold-text">Kingdom School in Holiness</h3>
+                    <p class="mb-4">
+                        Educational institution where young Saints receive both academic instruction and spiritual formation. Unlike worldly schools that corrupt young minds, our children learn to integrate divine wisdom with practical knowledge, preserving them from the polluting influences of Babylon's educational systems.
+                    </p>
+                </div>
+
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 gold-text">Divine Dining Hall</h3>
+                    <p class="mb-4">
+                        Community gathering place where Saints share meals prepared according to Genesis Nutrition principles. Special feasts during Holy Days and community celebrations take place in this sanctified space.
+                    </p>
+                </div>
+
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 gold-text">Botanical Gardens</h3>
+                    <p class="mb-4">
+                        Extensive gardens where healing herbs, vegetables, and fruits are grown according to natural methods. The discovery of fenugreek's healing properties by Prince Gavriel began here, demonstrating that Yah's pharmacy exists in the plant kingdom.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 gold-text text-center">Daily Life in the Village</h3>
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+                    <p class="mb-4">
+                        Life in the Village follows divine rhythms rather than worldly patterns:
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="gold-text mr-3">•</span>
+                            <span><strong>Dawn:</strong> Many Saints begin the day with meditation, prayer, and Holy Concern (physical exercise)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="gold-text mr-3">•</span>
+                            <span><strong>Morning:</strong> Children attend Kingdom School while adults work in community enterprises or external employment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="gold-text mr-3">•</span>
+                            <span><strong>Midday:</strong> Simple, nutritious meals prepared according to Genesis principles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="gold-text mr-3">•</span>
+                            <span><strong>Afternoon:</strong> Continued work, study, and community service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="gold-text mr-3">•</span>
+                            <span><strong>Evening:</strong> Family time, community gatherings, cultural activities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="gold-text mr-3">•</span>
+                            <span><strong>Night:</strong> Early retirement to maintain natural cycles of rest and activity</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xl italic max-w-3xl mx-auto">
+                    What began as a vision received by H.E. Ben Ammi in 1966 now stands as living proof that Yah's Kingdom can be established on earth as it is in heaven. The Village of Peace demonstrates that human beings, when aligned with divine purpose, can create heaven on earth—the tangible manifestation of righteousness, peace, and joy in the Holy Spirit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="light-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">The Impregnable People Books</h2>
+            <p class="text-center max-w-3xl mx-auto mb-16 text-lg grey-text">
+                The definitive firsthand account of our prophetic journey, written by Prince Gavriel Ha Gadol.
+            </p>
+
+            <div class="flex flex-col md:flex-row mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold mb-4">The Chronicles That Document Prophecy Fulfilled</h3>
+                    <p class="mb-6">
+                        The Impregnable People chronicles stand as the definitive firsthand account of the African Hebrew Israelites' prophetic journey from America to Africa to the Holy Land. Written by Prince Gavriel Ha Gadol, these volumes document not merely historical events but the fulfillment of divine prophecy through the lives of ordinary people guided by extraordinary purpose.
+                    </p>
+
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-3">Part One: Exodus from Captivity</h4>
+                        <p class="italic mb-3">
+                            The awakening from spiritual death, the divine vision of 1966, and our exodus through the wilderness of Liberia
+                        </p>
+                        <p>
+                            Experience the powerful beginning of our prophetic journey as H.E. Ben Ammi receives the divine vision that would change history. Follow the first brave souls who left the comforts of America to face the unknown challenges of the Liberian wilderness, where their faith would be tested and refined.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-3">Part Two: Kingdom Established</h4>
+                        <p class="italic mb-3">
+                            From arrival in the Holy Land to the Mountain of Life, through 20 years of trials to divine vindication
+                        </p>
+                        <p>
+                            Witness the fulfillment of prophecy as the children of Israel return to the Promised Land after centuries in exile. Experience the establishment of Yah's Kingdom in Dimona, the trials that tested our faith for twenty years, and the final vindication when the covenant was remembered in 1990.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-6">
+                        <div class="flex-1 bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="h-64 bg-gray-200 flex items-center justify-center">
+                                <span class="text-xl text-gray-500">Book Cover</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">Part One</h4>
+                                <p class="text-sm grey-text mb-3">Exodus from Captivity</p>
+                                <a href="#" class="gold-button block text-center py-2 rounded">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="h-64 bg-gray-200 flex items-center justify-center">
+                                <span class="text-xl text-gray-500">Book Cover</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold mb-1">Part Two</h4>
+                                <p class="text-sm grey-text mb-3">Kingdom Established</p>
+                                <a href="#" class="gold-button block text-center py-2 rounded">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="audiobook" class="mt-8 bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-3">The Living Word: Audiobook Experience</h4>
+                            <p class="mb-4">
+                                Hear the journey come alive through powerful narration. The audiobook of "The Impregnable People, Part One" captures the passion, struggle, and divine guidance of our exodus from captivity through the wilderness.
+                            </p>
+                            <div class="bg-gray-100 rounded-md p-4 flex items-center">
+                                <div class="mr-4">
+                                    <button class="w-12 h-12 rounded-full bg-gold flex items-center justify-center">
+                                        <i class="fas fa-play text-white"></i>
+                                    </button>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="h-2 bg-gray-300 rounded-full overflow-hidden">
+                                        <div class="h-full w-1/3 bg-gold"></div>
+                                    </div>
+                                    <div class="flex justify-between mt-1 text-xs text-gray-500">
+                                        <span>1:23</span>
+                                        <span>4:56</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <div class="w-48 h-48 mx-auto rounded-full bg-gray-200 flex items-center justify-center">
+                        <span class="text-xl text-gray-500">Author Photo</span>
+                    </div>
+                </div>
+
+                <div class="md:w-2/3 md:pl-8">
+                    <h3 class="text-2xl font-bold mb-4">Prince Gavriel Ha Gadol: Author Profile</h3>
+                    <p class="italic mb-4">
+                        "For I know the thoughts that I think toward you, saith Yah, thoughts of peace, and not of evil, to give you an expected end." —Jeremiah 29:11
+                    </p>
+                    <p class="mb-4">
+                        Prince Gavriel Ha Gadol, known as the "Prince of Love," stands among the foundational pioneers of Yah's Kingdom on earth. His life embodies the transformation from spiritual death to resurrection that defines the African Hebrew Israelite journey.
+                    </p>
+                    <p class="mb-4">
+                        Born George Butler on February 28, 1937, in Delhi, Louisiana during the latter years of the Great Depression, Prince Gavriel's early life reflected the experiences of many African Americans in the segregated South—close family bonds amid challenging circumstances.
+                    </p>
+                    <p class="mb-4">
+                        On August 19, 1969, Prince Gavriel, along with Tekia and their son Benainu, became the first family to immigrate from Liberia to Israel, marking the beginning of the prophetic return to the Holy Land. This historic journey completed the pattern established by the ancient Israelites—from bondage to wilderness to promised inheritance.
+                    </p>
+                    <p class="mb-4">
+                        Upon settling in Israel, Prince Gavriel was appointed as one of the twelve Princes of the Divine Council in 1971, receiving the spiritual title "Prince of Love." His contributions to the community included the introduction of healing herbs like fenugreek (which he named "Love Powder") and development of nutritional approaches that transformed community health.
+                    </p>
+                    <p class="italic">
+                        "When I look at our community today—the Village of Peace, our healthy children and grandchildren, the international recognition we've received—I see not just our accomplishment but divine vindication. We were ex-Negroes from America's ghettos—people systematically stripped of identity, dignity, and strength. Now we stand as Hebrew Israelites firmly established in the Holy Land, unbroken despite decades of opposition. This transformation is the true miracle."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="dark-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="accordion mb-4">
+                    <div class="accordion-header">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">Why did you leave America?</h3>
+                            <i class="fas fa-plus text-gold"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="mb-4">
+                            In February 1966, H.E. Ben Ammi received a divine vision from the Angel Gabriel instructing him to lead the people back to the Promised Land. The message was clear: "It is time to start the journey back to the promised land and to establish the long awaited kingdom of God that had been prophesied by Daniel the prophet in the second chapter and the 44th verse. And the year of the Exodus will be 1967."
+                        </p>
+                        <p>
+                            This revelation coincided with the prophetic timeline described in Scripture, which indicated that after approximately 400 years in captivity (from 1619 to 1967), the children of Israel would return to their homeland. The social upheaval in America during 1967—widespread riots, civil unrest, and a massive snowstorm in Chicago that H.E. Ben Ammi saw as divine confirmation—created the conditions for this prophetic exodus to unfold exactly as foretold.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion mb-4">
+                    <div class="accordion-header">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">How did you know you were Hebrew Israelites?</h3>
+                            <i class="fas fa-plus text-gold"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="mb-4">
+                            Our identity as Hebrew Israelites was revealed through both divine revelation and scriptural study. When we examined passages like Deuteronomy 28, which describes the curses that would befall Israel for disobedience, we recognized our own historical experience of slavery, oppression, and identity loss perfectly described in these prophecies.
+                        </p>
+                        <p class="mb-4">
+                            Deuteronomy 28:68 specifically mentions the children of Israel being taken back into Egypt (symbolizing bondage) in ships—a clear reference to the transatlantic slave trade. The scripture goes on to say they would be sold as bondmen and bondwomen with "none to buy you" (or redeem you), exactly matching our experience in chattel slavery where we were property with no redemption rights.
+                        </p>
+                        <p>
+                            Our identity was not something we invented but something we recovered through divine revelation and careful study of Scripture, archaeology, and history—all of which confirmed that the descendants of the transatlantic slave trade were indeed the children of Israel in exile, precisely as prophesied.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion mb-4">
+                    <div class="accordion-header">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">What is Genesis Nutrition?</h3>
+                            <i class="fas fa-plus text-gold"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="mb-4">
+                            Genesis Nutrition is our community's approach to diet and health based on Genesis 1:29: "Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat."
+                        </p>
+                        <p class="mb-4">
+                            We follow a plant-based, vegan diet that emphasizes living foods, minimal processing, and alignment with natural cycles. This preventative and regenerative approach has virtually eliminated common Western diseases within our community and produced generations of exceptionally healthy children.
+                        </p>
+                        <p>
+                            Our nutrition system focuses not merely on avoiding illness but on actively promoting vibrant health, longevity, and spiritual clarity. We view food as medicine and recognize that physical purity contributes to spiritual receptivity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion mb-4">
+                    <div class="accordion-header">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">How did you establish yourselves in Israel?</h3>
+                            <i class="fas fa-plus text-gold"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="mb-4">
+                            Our establishment in Israel followed a prophetic pattern of testing and vindication. The first arrivals in 1969 settled initially in Arad before expanding to Dimona and Mitzpeh Ramon. For twenty years (1970-1990), we faced significant legal challenges, deportations, and opposition.
+                        </p>
+                        <p class="mb-4">
+                            During this testing period, we remained focused on building our community institutions—the House of Life (natural birthing center), Kingdom School in Holiness, and various self-sustaining enterprises. We maintained our distinctive cultural practices, Genesis Nutrition, and spiritual observances despite external pressure.
+                        </p>
+                        <p>
+                            In 1990, after exactly twenty years—a biblically significant period of testing—the Israeli government granted our community members B-1 work visas, beginning the process of legal recognition. This breakthrough came through persistent diplomacy, growing recognition of our positive contributions to Israeli society, and ultimately, divine timing in fulfillment of prophecy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="light-section py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Connect With Us</h2>
+            <p class="text-center max-w-3xl mx-auto mb-16 text-lg grey-text">
+                Experience the living testimony of prophecy fulfilled.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 mb-4 rounded-full bg-gold flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Visit the Village of Peace</h3>
+                    <p class="mb-4 grey-text">
+                        Experience firsthand the living testimony of prophecy fulfilled.
+                    </p>
+                    <p class="text-sm">
+                        <strong>Location:</strong> Dimona, Israel<br>
+                        <strong>Tours:</strong> Sunday through Thursday<br>
+                        <strong>Contact for Appointments:</strong> +972-8-655-7789
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 mb-4 rounded-full bg-gold flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Contact Us</h3>
+                    <p class="mb-4 grey-text">
+                        Reach out with questions or to request information.
+                    </p>
+                    <p class="text-sm">
+                        <strong>Email:</strong> info@khaiyahwah.com<br>
+                        <strong>Phone:</strong> +972-8-655-7789<br>
+                        <strong>Postal:</strong> P.O. Box 481, Dimona, Israel 8610401
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 mb-4 rounded-full bg-gold flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">International Locations</h3>
+                    <p class="mb-4 grey-text">
+                        Connect with our communities worldwide.
+                    </p>
+                    <p class="text-sm">
+                        <strong>United States:</strong> Chicago, Atlanta, Houston<br>
+                        <strong>Africa:</strong> Ghana, South Africa, Benin<br>
+                        <strong>Caribbean:</strong> St. Kitts, U.S. Virgin Islands<br>
+                        <strong>United Kingdom:</strong> London
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-lg mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Stay Connected</h3>
+                    <p class="text-center mb-6 grey-text">
+                        Receive updates on events, publications, and community news.
+                    </p>
+
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2 font-medium">Name</label>
+                            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gold">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gold">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="interest" class="block mb-2 font-medium">I'm interested in:</label>
+                            <select id="interest" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gold">
+                                <option>Visiting the Village of Peace</option>
+                                <option>Learning about Genesis Nutrition</option>
+                                <option>The Impregnable People books</option>
+                                <option>Community history and heritage</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full gold-button py-3 px-6 rounded-md font-semibold">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark-section py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-8 md:mb-0">
+                    <a href="#home" class="flex items-center space-x-3 mb-4">
+                        <!-- Removed SVG Logo -->
+                        <span class="logo-text text-xl font-bold">Khai Yahwah</span>
+                    </a>
+                    <p class="text-gray-400 max-w-xs">
+                        The African Hebrew Israelites of Jerusalem stand as living testimony to the fulfillment of biblical prophecy—the return of the children of Israel to the Promised Land after centuries in captivity.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 gold-text">Main Sections</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-gold">Home</a></li>
+                            <li><a href="#journey" class="text-gray-400 hover:text-gold">Our Journey</a></li>
+                            <li><a href="#principles" class="text-gray-400 hover:text-gold">Kingdom Principles</a></li>
+                            <li><a href="#holy-days" class="text-gray-400 hover:text-gold">Holy Days</a></li>
+                            <li><a href="#village" class="text-gray-400 hover:text-gold">Village of Peace</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 gold-text">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#books" class="text-gray-400 hover:text-gold">Books</a></li>
+                            <li><a href="#audiobook" class="text-gray-400 hover:text-gold">Audiobooks</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Kingdom Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">FAQ</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Store</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 gold-text">Connect</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#connect" class="text-gray-400 hover:text-gold">Contact</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Visit</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Newsletter</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">International</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-gold">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">
+                    © 2023 Khai Yahwah. All rights reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-gold"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gold"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gold"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gold"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
 </body>
 </html>
