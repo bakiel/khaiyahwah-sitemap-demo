@@ -178,30 +178,41 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.accordion-header {
+/* Accordion Styles */
+.faq-question { /* Renamed from accordion-header in HTML, update CSS */
     cursor: pointer;
     padding: 15px;
-    background-color: var(--light-bg);
-    border-left: 3px solid var(--gold);
-    margin-bottom: 2px;
+    background-color: transparent; /* Remove background */
+    /* border-left: 3px solid var(--gold); */ /* Remove border */
+    margin-bottom: 0.5rem; /* Keep original margin */
     transition: all 0.3s ease;
+    color: var(--text-dark); /* Dark color for better contrast */
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.accordion-header:hover {
-    background-color: rgba(197, 160, 89, 0.1);
+.faq-question:hover {
+    color: var(--gold); /* Gold hover */
 }
 
-.accordion-content {
+.faq-answer { /* Renamed from accordion-content */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: var(--light-bg);
-    padding: 0 15px;
+    transition: max-height 0.3s ease-out; /* Use ease-out */
+    /* background-color: var(--light-bg); */ /* Remove background */
+    padding: 0 15px; /* Keep horizontal padding */
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-.accordion-content.active {
+.faq-answer.active {
     max-height: 1000px; /* Adjust if needed for very long content */
-    padding: 15px;
+    padding-top: 0.5rem; /* Add top padding when active */
+    padding-bottom: 1.5rem; /* Add bottom padding when active */
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .tab-content {
