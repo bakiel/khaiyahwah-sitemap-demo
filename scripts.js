@@ -31,43 +31,78 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Accordion functionality
-const accordionHeaders = document.querySelectorAll('.accordion-header');
+// Wait for the DOM to be fully loaded before running accordion/tab scripts
+document.addEventListener('DOMContentLoaded', () => {
+    // Accordion functionality
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-        const icon = header.querySelector('i'); // Assuming Font Awesome icons
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('i'); // Assuming Font Awesome icons
 
-        // Toggle active class on content
-        content.classList.toggle('active');
+            // Toggle active class on content
+            if (content && content.classList.contains('faq-answer')) { // Check if next sibling is the answer
+                content.classList.toggle('active');
 
-        // Toggle icon class
-        if (icon) {
-            if (content.classList.contains('active')) {
-                icon.classList.replace('fa-plus', 'fa-minus');
-            } else {
-                icon.classList.replace('fa-minus', 'fa-plus');
-            }
-        }
-
-        // Optional: Close other accordions when one is opened
-        accordionHeaders.forEach(otherHeader => {
-            if (otherHeader !== header) {
-                const otherContent = otherHeader.nextElementSibling;
-                const otherIcon = otherHeader.querySelector('i');
-                if (otherContent.classList.contains('active')) {
-                    otherContent.classList.remove('active');
-                    if (otherIcon) {
-                        otherIcon.classList.replace('fa-minus', 'fa-plus');
+                // Toggle icon class
+                if (icon) {
+                    if (content.classList.contains('active')) {
+                        icon.classList.replace('fa-plus', 'fa-minus');
+                    } else {
+                        icon.classList.replace('fa-minus', 'fa-plus');
                     }
                 }
-            }
+
+                // Optional: Close other accordions when one is opened
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        const otherContent = otherHeader.nextElementSibling;
+                        if (otherContent && otherContent.classList.contains('faq-answer') && otherContent.classList.contains('active')) {
+                            otherContent.classList.remove('active');
+                            const otherIcon = otherHeader.querySelector('i');
+                            if (otherIcon) {
+                                otherIcon.classList.replace('fa-minus', 'fa-plus');
+                            }
+                        }
+                    }
+                });
+            } // End check for valid content element
         });
     });
-});
+
+    // Tab functionality (if needed later)
+    function activateTab(tabGroup, tabButton) {
+        const group = document.getElementById(tabGroup);
+        if (!group) return;
+
+        // Deactivate all buttons and content in this group
+        group.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        group.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        // Activate the clicked button and corresponding content
+        tabButton.classList.add('active');
+        const contentId = tabButton.getAttribute('data-target');
+        const targetContent = document.getElementById(contentId);
+        if (targetContent) {
+            targetContent.classList.add('active');
+        }
+    }
+
+    // Example usage for tabs (add relevant IDs and data-target attributes in HTML)
+    // const tabButtons = document.querySelectorAll('.tab-button');
+    // tabButtons.forEach(button => {
+    //     button.addEventListener('click', () => {
+    //         const tabGroup = button.closest('[data-tab-group]').getAttribute('data-tab-group');
+    //         activateTab(tabGroup, button);
+    //     });
+    // });
+
+}); // End DOMContentLoaded listener
+
 
 // Active navigation highlight on scroll (if sections have corresponding IDs)
+// This can run outside DOMContentLoaded as it relies on scroll events
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link'); // Ensure nav links have this class
 
