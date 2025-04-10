@@ -266,45 +266,5 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
 /* Ensure Tailwind base styles don't conflict heavily */
 /* Add any necessary overrides here */
 
-/* Example: Ensure consistent padding if needed */
-main section {
-    padding-top: 4rem; /* py-16 */
-    padding-bottom: 4rem; /* py-16 */
-    padding-left: 1rem; /* px-4 */
-    padding-right: 1rem; /* px-4 */
-}
-
-/* Ensure header nav links are visible on dark header */
-header nav a {
-    color: #E5E7EB; /* Tailwind gray-200 */
-}
-header nav a:hover {
-    color: white;
-}
-header nav a.active-nav {
-    color: white; /* Active link in header */
-    border-bottom-color: var(--gold);
-}
-
-/* Ensure footer nav links are visible on dark footer */
-footer nav a {
-    color: #9CA3AF; /* Tailwind gray-400 */
-}
-footer nav a:hover {
-    color: var(--gold);
-}
-
-/* Placeholder image style from previous CSS */
-.placeholder-image {
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #757575;
-    font-style: italic;
-    text-align: center;
-    border: 1px dashed #bdbdbd;
-    min-height: 200px;
-    width: 100%;
-    margin-bottom: 1rem;
-}
+/* Placeholder image style from previous CSS (Ensure only one definition exists) */
+/* Removed duplicate definition */
