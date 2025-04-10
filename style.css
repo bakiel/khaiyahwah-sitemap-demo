@@ -214,6 +214,7 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
     padding-left: 15px;
     padding-right: 15px;
     background-color: white; /* Explicitly set background for contrast */
+    color: var(--text-dark) !important; /* Force dark text color for contrast */
 }
 
 .tab-content {
