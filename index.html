@@ -3,243 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KhaiYahwah.com Sitemap Generator</title>
+    <title>KhaiYahwah.com - Yah's Covenant Fulfilled</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link the external CSS -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Keep minimal styles if needed, or remove this block entirely if all styles are in style.css */
-        /* Example: Keep only essential overrides or styles not covered by external CSS */
-        .container { /* Example override */
-            padding-left: 1rem;
-            padding-right: 1rem;
+        /* Placeholder style */
+        .placeholder-image {
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #757575;
+            font-style: italic;
+            text-align: center;
+            border: 1px dashed #bdbdbd;
+            min-height: 300px; /* Adjust as needed for hero */
+            width: 100%;
+            margin-bottom: 1rem;
         }
-        /* Redundant styles removed, relying on style.css */
+        .placeholder-timeline {
+            background-color: #f0f0f0;
+            border: 1px dashed #ccc;
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            min-height: 150px;
+        }
+        /* Basic button styling */
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 600; /* font-semibold */
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+        }
+        .cta-primary {
+            background-color: #4a6da7; /* main blue */
+            color: white;
+        }
+        .cta-primary:hover {
+            background-color: #3b5687;
+        }
+        .cta-secondary {
+            background-color: #c9aa88; /* gold */
+            color: #333;
+        }
+         .cta-secondary:hover {
+            background-color: #b89977;
+        }
     </style>
 </head>
-<body class="py-6">
-    <div class="container px-4"> <!-- Adjusted container class usage if needed -->
-        <header class="mb-10 text-center">
-            <h1 class="text-3xl font-bold mb-4">KhaiYahwah.com Interactive Sitemap</h1>
-            <p class="text-gray-600">An interactive map of the website structure.</p>
-        </header>
+<body class="bg-gray-100">
 
-        <section class="mb-10">
-            <h2 class="text-2xl font-bold mb-4">Interactive Sitemap</h2>
-            <div class="sitemap-preview">
-                <!-- ROOT NODE -->
-                <div class="node main-node text-center">HOME</div>
+    <!-- Header Placeholder -->
+    <header class="bg-blue-800 text-white p-4 sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">KhaiYahwah.com</div>
+            <div>
+                <!-- Navigation Links Placeholder -->
+                <a href="index.html" class="px-2 hover:text-gray-300 font-semibold">Home</a>
+                <a href="#journey" class="px-2 hover:text-gray-300">Our Journey</a>
+                <a href="#principles" class="px-2 hover:text-gray-300">Principles</a>
+                <a href="#store" class="px-2 hover:text-gray-300">Store</a>
+                <a href="#connect" class="px-2 hover:text-gray-300">Connect</a>
+                <!-- Add other main nav links later -->
+            </div>
+        </nav>
+    </header>
 
-                <!-- OUR JOURNEY -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> OUR JOURNEY
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node">The Divine Vision (1966)</div>
-                    <div class="node sub-node">The Exodus Begins (1967)</div>
-                    <div class="node sub-node">Wilderness Purification (1967-1969)</div>
-                    <div class="node sub-node">Return to the Promised Land (1969-1970)</div>
-                    <div class="node sub-node">The Mountain of Life (1971)</div>
-                    <div class="node sub-node">The Test of Patience (1973-1986)</div>
-                    <div class="node sub-node">The Great Show of Strength (1986)</div>
-                    <div class="node sub-node">Covenant Remembered (1990)</div>
-                </div>
-
-                <!-- KINGDOM PRINCIPLES -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> KINGDOM PRINCIPLES
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node">The Genesis Idea (Overview)</div>
-                    <div class="node sub-node">Divine Nutrition</div>
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Divine Governance
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                         <div class="node sub-sub-node">The Divine Council</div>
-                    </div>
-                    <div class="node sub-node">Kingdom Education</div>
-                    <div class="node sub-node">Divine Marriage</div>
-                </div>
-
-                <!-- HOLY DAYS & CELEBRATIONS -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> HOLY DAYS & CELEBRATIONS
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node">The Sabbath (Shabbat)</div>
-                    <div class="node sub-node">Passover (Pessach)</div>
-                    <div class="node sub-node">Feast of Unleavened Bread</div>
-                    <div class="node sub-node">Feast of Weeks (Shavuote)</div>
-                    <div class="node sub-node">Memorial Blowing of Trumpets</div>
-                    <div class="node sub-node">Day of Atonement (Yom Kippur)</div>
-                    <div class="node sub-node">Feast of Tabernacles (Sukkhote)</div>
-                    <div class="node sub-node">Hebraic New Year</div>
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Kingdom Celebrations
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">New World Passover</div>
-                        <div class="node sub-sub-node">Day of Appreciation (Yom L'Mokareem)</div>
-                        <div class="node sub-sub-node">National Vegan Day</div>
-                    </div>
-                    <div class="node sub-node expandable">
-                         <i class="fas fa-chevron-right toggle-icon"></i> Preventive Health Observances
-                    </div>
-                     <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">No Salt Days</div>
-                        <div class="node sub-sub-node">Live Food Day/Week</div>
-                        <div class="node sub-sub-node">Sugarless Week</div>
-                    </div>
-                </div>
-
-                <!-- THE VILLAGE OF PEACE -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> THE VILLAGE OF PEACE
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node">Divine Transformation</div>
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Community Institutions
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">The House of Life</div>
-                        <div class="node sub-sub-node">Kingdom School in Holiness</div>
-                        <div class="node sub-sub-node">Divine Dining Hall</div>
-                        <div class="node sub-sub-node">Botanical Gardens</div>
-                        <div class="node sub-sub-node">Cultural Arts Center</div>
-                    </div>
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Kingdom Economy
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">Vegan Restaurants</div>
-                        <div class="node sub-sub-node">Artisan Workshops</div>
-                        <div class="node sub-sub-node">Wellness Center</div>
-                    </div>
-                    <div class="node sub-node">Daily Life in the Village</div>
-                </div>
-
-                <!-- TESTIMONIES -->
-                 <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> TESTIMONIES
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node">Prince Gavriel Ha Gadol</div>
-                    <div class="node sub-node">Emah Tekia</div>
-                    <div class="node sub-node">Prince Hezkiyahoo</div>
-                    <div class="node sub-node">Community Testimonies</div>
-                </div>
-
-                <!-- THE IMPREGNABLE PEOPLE BOOKS -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> THE IMPREGNABLE PEOPLE BOOKS
-                </div>
-                 <div class="sub-nodes-container hidden">
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Book Showcase
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">Part One: Exodus from Captivity</div>
-                        <div class="node sub-sub-node">Part Two: Kingdom Established</div>
-                    </div>
-                    <div class="node sub-node">Author Profile: Prince Gavriel Ha Gadol</div>
-                    <div class="node sub-node">Audiobook Experience</div>
-                </div>
-
-                <!-- RESOURCES -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> RESOURCES
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Kingdom Blog
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">Holy Day Reflections</div>
-                        <div class="node sub-sub-node">Community Milestones</div>
-                        <div class="node sub-sub-node">Health Insights</div>
-                        <div class="node sub-sub-node">Prophetic Perspectives</div>
-                    </div>
-                    <div class="node sub-node">Frequently Asked Questions</div>
-                </div>
-
-                <!-- STORE -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> STORE
-                    <i class="fab fa-stripe payment-icon text-blue-600" title="Stripe Payments"></i>
-                    <i class="fab fa-paypal payment-icon text-blue-800" title="PayPal Payments"></i>
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Books & Audiobooks
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">The Impregnable People, Part One</div>
-                        <div class="node sub-sub-node">The Impregnable People, Part Two</div>
-                        <div class="node sub-sub-node">Audiobook</div>
-                        <div class="node sub-sub-node">Bundle Options</div>
-                    </div>
-                    <div class="node sub-node expandable">
-                        <i class="fas fa-chevron-right toggle-icon"></i> Kingdom Products
-                    </div>
-                    <div class="sub-sub-nodes-container hidden">
-                        <div class="node sub-sub-node">Healing Herbs</div>
-                        <div class="node sub-sub-node">Genesis Nutrition Items</div>
-                        <div class="node sub-sub-node">Cultural Items</div>
-                    </div>
-                </div>
-
-                <!-- CONNECT -->
-                <div class="node main-node expandable">
-                    <i class="fas fa-chevron-right toggle-icon"></i> CONNECT
-                </div>
-                <div class="sub-nodes-container hidden">
-                    <div class="node sub-node">Contact Information</div>
-                    <div class="node sub-node">Visit Information</div>
-                    <div class="node sub-node">International Locations</div>
-                    <div class="node sub-node">Newsletter Signup</div>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative text-center py-16 md:py-24 bg-gray-200">
+             <div class="absolute inset-0 placeholder-image opacity-30">[Background Image Placeholder: Village of Peace]</div>
+             <div class="relative container mx-auto px-4 z-10">
+                <p class="text-lg md:text-xl text-gray-700 mb-4 italic">
+                    "And in the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed... and it shall stand for ever." — Daniel 2:44
+                </p>
+                <h1 class="text-4xl md:text-6xl font-bold text-blue-900 mb-3">YAH KHAI!</h1>
+                <h2 class="text-3xl md:text-5xl font-semibold text-blue-800 mb-6">The Covenant Fulfilled</h2>
+                <p class="text-xl md:text-2xl text-gray-800 mb-8 max-w-3xl mx-auto">
+                    We stand as living testimony—African Hebrew Israelites returned to the Promised Land after centuries in captivity, precisely as the prophets foretold.
+                </p>
+                <div>
+                    <a href="#journey-overview" class="cta-button cta-primary">Witness The Journey</a>
+                    <a href="author-profile.html" class="cta-button cta-secondary">Obtain The Testimony</a>
                 </div>
             </div>
         </section>
 
-        <!-- Removed Python Implementation, Code Explanation, and Customization Sections -->
+        <!-- Brief Introduction -->
+        <section class="container mx-auto py-12 md:py-16 px-4">
+             <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Prophetic Journey Home</h2>
+             <div class="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-4">
+                <p>
+                    For centuries, the children of Israel languished in spiritual death, scattered to the four corners of the earth as foretold by the prophets. Stripped of identity, disconnected from heritage, and bound in mental captivity, we endured the curses described in Deuteronomy 28—the bitter fruit of disobedience. Yet even in our darkest hour, Yah never abandoned His covenant.
+                </p>
+                <p>
+                    In February 1966, the Angel Gabriel appeared to H.E. Ben Ammi with divine instructions: "It is time to start the journey back to the promised land and to establish the long awaited kingdom of God that had been prophesied by Daniel the prophet in the second chapter and the 44th verse. And the year of the Exodus will be 1967."
+                </p>
+                <p>
+                    This 45-second vision ignited a flame that would lead hundreds from America to Liberia and finally to the Holy Land—fulfilling the prophetic timeline with remarkable precision. After nearly 400 years in captivity, the children of Israel have returned home, establishing Yah's Kingdom on earth not as metaphor but as tangible reality in the Village of Peace.
+                </p>
+            </div>
+        </section>
 
-        <footer class="text-center text-gray-600 mt-16 pt-8 border-t border-gray-200">
-            <p>KhaiYahwah.com Interactive Sitemap</p>
-            <p class="mt-2 text-sm">Explore the site structure</p>
-        </footer>
-    </div>
+        <!-- Book/Audiobook Promotion -->
+        <section class="bg-blue-50 py-12 md:py-16 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Experience the Complete Testimony</h2>
+                 <blockquote class="max-w-3xl mx-auto italic text-gray-600 mb-6">
+                    "The Impregnable People chronicles our exodus from spiritual death in America through the wilderness of Liberia to the establishment of Yah's Kingdom in the Holy Land. This is not merely history—it is prophecy fulfilled before your eyes."<br>
+                    — Prince Gavriel Ha Gadol, Author
+                </blockquote>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
+                    <div class="placeholder-image w-full md:w-1/3 min-h-[250px]">[Image Placeholder: Book Cover - Part 1]</div>
+                    <div class="placeholder-image w-full md:w-1/3 min-h-[250px]">[Image Placeholder: Book Cover - Part 2]</div>
+                </div>
+                <div>
+                     <a href="#store-books" class="cta-button cta-secondary">Obtain The Books</a>
+                     <a href="#store-audiobook" class="cta-button cta-secondary">Hear The Audiobook</a>
+                </div>
+            </div>
+        </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const expandableNodes = document.querySelectorAll('.expandable');
+        <!-- Prophetic Timeline -->
+         <section class="container mx-auto py-12 md:py-16 px-4">
+             <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Prophetic Timeline Highlights</h2>
+             <div class="placeholder-timeline">
+                [Visual Timeline Placeholder: Key dates like 1966 (Vision), 1967 (Exodus), 1969 (Arrival in Israel), 1971 (Mountain of Life), 1990 (Recognition) will be displayed here visually later.]
+                <br><br>
+                Key Dates: 1966 (Vision) -> 1967 (Exodus Begins) -> 1969 (Arrival in Israel) -> 1971 (Mountain of Life) -> 1990 (Covenant Remembered)
+             </div>
+         </section>
 
-            expandableNodes.forEach(node => {
-                node.addEventListener('click', (event) => {
-                    // Prevent nested elements like icons from triggering multiple times
-                    if (event.target !== node && !event.target.classList.contains('toggle-icon')) {
-                        return;
-                    }
+    </main>
 
-                    const icon = node.querySelector('.toggle-icon');
-                    const subNodesContainer = node.nextElementSibling;
+    <!-- Footer Placeholder -->
+    <footer class="bg-gray-800 text-gray-400 p-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> KhaiYahwah.com. All rights reserved.</p>
+            <!-- Footer Navigation Placeholder -->
+            <div class="mt-2">
+                <a href="#" class="px-2 hover:text-white">About Us</a> |
+                <a href="#" class="px-2 hover:text-white">FAQ</a> |
+                <a href="#" class="px-2 hover:text-white">Contact</a> |
+                <a href="#" class="px-2 hover:text-white">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
 
-                    if (subNodesContainer && (subNodesContainer.classList.contains('sub-nodes-container') || subNodesContainer.classList.contains('sub-sub-nodes-container'))) {
-                        subNodesContainer.classList.toggle('hidden');
-                        if (icon) {
-                             icon.classList.toggle('fa-chevron-right');
-                             icon.classList.toggle('fa-chevron-down');
-                        }
-                        // Ensure parent container adjusts if needed (though block layout usually handles this)
-                        node.classList.toggle('expanded');
-                    }
-                });
-            });
-        });
-
-        // Keep copy function if needed elsewhere, otherwise remove
-        // function copyToClipboard(button, text) { ... }
-    </script>
 </body>
 </html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - KhaiYahwah.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"> <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Placeholder style */
+        .placeholder-image {
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #757575;
+            font-style: italic;
+            text-align: center;
+            border: 1px dashed #bdbdbd;
+            min-height: 200px; /* Adjust as needed */
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
+        }
+        .product-card:hover {
+             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .buy-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+            background-color: #4a6da7; /* main blue */
+            color: white;
+            text-align: center;
+        }
+        .buy-button:hover {
+            background-color: #3b5687;
+        }
+        .payment-icons-container {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        .payment-icon-store {
+             font-size: 1.5rem;
+             margin: 0 0.5rem;
+             color: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Placeholder -->
+    <header class="bg-blue-800 text-white p-4 sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">KhaiYahwah.com</div>
+            <div>
+                <!-- Navigation Links Placeholder -->
+                <a href="index.html" class="px-2 hover:text-gray-300">Home</a>
+                <a href="journey-overview.html" class="px-2 hover:text-gray-300">Our Journey</a>
+                <a href="#principles" class="px-2 hover:text-gray-300">Principles</a>
+                <a href="store.html" class="px-2 hover:text-gray-300 font-semibold">Store</a>
+                <a href="#connect" class="px-2 hover:text-gray-300">Connect</a>
+                <!-- Add other main nav links later -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-md">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-b pb-4">Kingdom Store</h1>
+
+            <!-- Books & Audiobooks Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-blue-800 mb-6">Books & Audiobooks</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product Card Example -->
+                    <div class="product-card">
+                        <div class="placeholder-image">[Image Placeholder: Book Cover - Part 1]</div>
+                        <h3 class="text-xl font-semibold text-gray-800">The Impregnable People, Part One</h3>
+                        <p class="text-gray-600 mt-2">Exodus from Captivity. Chronicles the spiritual awakening and journey through the wilderness.</p>
+                        <a href="#" class="buy-button block">Purchase Book</a>
+                    </div>
+                    <!-- Product Card Example -->
+                    <div class="product-card">
+                        <div class="placeholder-image">[Image Placeholder: Book Cover - Part 2]</div>
+                        <h3 class="text-xl font-semibold text-gray-800">The Impregnable People, Part Two</h3>
+                        <p class="text-gray-600 mt-2">Kingdom Established. Details the arrival in the Holy Land and the trials faced.</p>
+                         <a href="#" class="buy-button block">Purchase Book</a>
+                    </div>
+                     <!-- Product Card Example -->
+                    <div class="product-card">
+                        <div class="placeholder-image">[Image Placeholder: Audiobook Cover]</div>
+                        <h3 class="text-xl font-semibold text-gray-800">The Impregnable People Audiobook</h3>
+                        <p class="text-gray-600 mt-2">Experience the journey through immersive narration. Sample clips available.</p>
+                         <a href="#" class="buy-button block">Purchase Audiobook</a>
+                    </div>
+                     <!-- Product Card Example -->
+                    <div class="product-card">
+                        <div class="placeholder-image">[Image Placeholder: Bundle Offer]</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Book & Audiobook Bundles</h3>
+                        <p class="text-gray-600 mt-2">Get special pricing when purchasing multiple formats or both volumes together.</p>
+                         <a href="#" class="buy-button block">View Bundles</a>
+                    </div>
+                    <!-- Add more product cards as needed -->
+                </div>
+            </section>
+
+            <!-- Kingdom Products Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold text-blue-800 mb-6">Kingdom Products</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                     <!-- Product Card Example -->
+                    <div class="product-card">
+                        <div class="placeholder-image">[Image Placeholder: Healing Herbs]</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Healing Herbs</h3>
+                        <p class="text-gray-600 mt-2">Discover traditional herbs like Fenugreek ("Love Powder") used in Genesis Nutrition.</p>
+                         <a href="#" class="buy-button block">Shop Herbs</a>
+                    </div>
+                     <!-- Product Card Example -->
+                    <div class="product-card">
+                        <div class="placeholder-image">[Image Placeholder: Genesis Nutrition Items]</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Genesis Nutrition Items</h3>
+                        <p class="text-gray-600 mt-2">Support your health with food items aligned with Genesis 1:29 principles.</p>
+                         <a href="#" class="buy-button block">Shop Nutrition</a>
+                    </div>
+                     <!-- Product Card Example -->
+                    <div class="product-card">
+                        <div class="placeholder-image">[Image Placeholder: Cultural Items]</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Cultural Items</h3>
+                        <p class="text-gray-600 mt-2">Apparel, crafts, and other items reflecting the Kingdom's heritage and culture.</p>
+                         <a href="#" class="buy-button block">Shop Cultural Items</a>
+                    </div>
+                     <!-- Add more product cards as needed -->
+                 </div>
+            </section>
+
+            <!-- Payment Information -->
+            <section class="payment-icons-container">
+                 <h3 class="text-lg font-semibold text-gray-700 mb-3">Secure Payment Options</h3>
+                 <p class="text-gray-600 mb-4">We accept payments through the following secure providers:</p>
+                 <div>
+                    <!-- Placeholder for SHP - Using a generic icon -->
+                    <span title="SHP Payments" class="inline-block mx-2">
+                        <i class="fas fa-shield-alt payment-icon-store text-gray-600"></i> SHP
+                    </span>
+                    <i class="fab fa-paypal payment-icon-store text-blue-800" title="PayPal Payments"></i>
+                    <i class="fab fa-stripe payment-icon-store text-indigo-600" title="Stripe Payments"></i>
+                 </div>
+                 <p class="text-sm text-gray-500 mt-4">Your transactions are secure and encrypted.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer class="bg-gray-800 text-gray-400 p-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> KhaiYahwah.com. All rights reserved.</p>
+            <!-- Footer Navigation Placeholder -->
+            <div class="mt-2">
+                <a href="#" class="px-2 hover:text-white">About Us</a> |
+                <a href="#" class="px-2 hover:text-white">FAQ</a> |
+                <a href="#" class="px-2 hover:text-white">Contact</a> |
+                <a href="#" class="px-2 hover:text-white">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
