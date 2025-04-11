@@ -10,7 +10,7 @@ async function loadMenu() {
     }
 
     try {
-        const response = await fetch('_menu.html');
+        const response = await fetch('./_menu.html'); // Explicitly relative path
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
