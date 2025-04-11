@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Khai Yahwah White BG.png" type="image/png"> <!-- Added Favicon -->
      <style>
         .faq-item {
             border-bottom: 1px solid #eee;
@@ -48,119 +49,8 @@
     </style>
 </head>
 <body>
-    <!-- New Navigation Structure -->
-    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-4 md:px-6 flex flex-wrap items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3">
-                <span class="logo-text text-2xl font-bold">Khai Yahwah</span>
-            </a>
-
-            <button id="mobile-menu-button" class="md:hidden block text-gray-800">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-
-            <div id="nav-menu" class="hidden md:flex w-full md:w-auto md:items-center">
-                <ul class="flex flex-col md:flex-row md:space-x-1 mt-4 md:mt-0"> <!-- Reduced space -->
-                    <li><a href="index.html" class="nav-link block py-2 md:py-0">Home</a></li>
-
-                    <!-- Our Journey Dropdown -->
-                    <li class="dropdown relative">
-                        <a href="journey-overview.html" class="nav-link block py-2 md:py-0 flex items-center">
-                            Our Journey <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="journey-overview.html">Overview</a></li>
-                            <li><a href="journey-divine-vision.html">Divine Vision</a></li>
-                            <li><a href="journey-exodus-begins.html">Exodus Begins</a></li>
-                            <li><a href="journey-wilderness.html">Wilderness</a></li>
-                            <li><a href="journey-return.html">Return to Land</a></li>
-                            <li><a href="journey-mountain-life.html">Mountain Life</a></li>
-                            <li><a href="journey-test-patience.html">Test of Patience</a></li>
-                            <li><a href="journey-show-strength.html">Show Strength</a></li>
-                            <li><a href="journey-covenant-remembered.html">Covenant Remembered</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Kingdom Principles Dropdown -->
-                    <li class="dropdown relative">
-                        <a href="#principles" class="nav-link block py-2 md:py-0 flex items-center"> <!-- Link to homepage section for now -->
-                            Principles <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="principles-genesis-idea.html">Genesis Idea</a></li>
-                            <li><a href="principles-divine-nutrition.html">Divine Nutrition</a></li>
-                            <li><a href="principles-divine-governance.html">Divine Governance</a></li>
-                            <li><a href="principles-kingdom-education.html">Kingdom Education</a></li>
-                            <li><a href="principles-divine-marriage.html">Divine Marriage</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Holy Days Dropdown -->
-                    <li class="dropdown relative">
-                        <a href="#holy-days" class="nav-link block py-2 md:py-0 flex items-center"> <!-- Link to homepage section for now -->
-                            Holy Days <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="holydays-sabbath.html">Sabbath</a></li>
-                            <li><a href="holydays-passover.html">Passover</a></li>
-                            <li><a href="holydays-unleavened-bread.html">Unleavened Bread</a></li>
-                            <li><a href="holydays-weeks.html">Weeks</a></li>
-                            <li><a href="holydays-trumpets.html">Trumpets</a></li>
-                            <li><a href="holydays-atonement.html">Atonement</a></li>
-                            <li><a href="holydays-tabernacles.html">Tabernacles</a></li>
-                            <li><a href="holydays-kingdom-celebrations.html">Kingdom Celebrations</a></li>
-                            <li><a href="holydays-preventive-health.html">Preventive Health</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Village of Peace Dropdown -->
-                    <li class="dropdown relative">
-                        <a href="#village" class="nav-link block py-2 md:py-0 flex items-center"> <!-- Link to homepage section for now -->
-                            Village <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="village-divine-transformation.html">Divine Transformation</a></li>
-                            <li><a href="village-community-institutions.html">Institutions</a></li>
-                            <li><a href="village-kingdom-economy.html">Kingdom Economy</a></li>
-                            <li><a href="village-daily-life.html">Daily Life</a></li>
-                        </ul>
-                    </li>
-
-                     <!-- Testimonies Dropdown -->
-                    <li class="dropdown relative">
-                        <a href="testimonies.html" class="nav-link block py-2 md:py-0 flex items-center">
-                            Testimonies <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="testimonies.html">Overview</a></li>
-                            <li><a href="testimony-gavriel.html">Prince Gavriel</a></li>
-                            <li><a href="testimony-tekia.html">Emah Tekia</a></li>
-                            <li><a href="testimony-hezkiyahoo.html">Prince Hezkiyahoo</a></li>
-                            <li><a href="testimony-community.html">Community</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="books.html" class="nav-link block py-2 md:py-0">Books</a></li>
-
-                     <!-- Connect Dropdown -->
-                     <li class="dropdown relative">
-                        <a href="connect.html" class="nav-link active-nav block py-2 md:py-0 flex items-center"> <!-- Set active -->
-                            Connect <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="connect.html">Contact/Visit</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="store.html">Store</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation Placeholder -->
+    <div id="main-navigation-placeholder"></div>
 
     <!-- Apply light-section style directly to main or a section inside -->
     <main class="light-section py-16 px-4">
@@ -227,10 +117,10 @@
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between mb-8">
                 <div class="mb-8 md:mb-0">
-                    <a href="index.html" class="flex items-center space-x-3 mb-4">
-                        <!-- Removed SVG Logo -->
-                        <span class="logo-text text-xl font-bold">Khai Yahwah</span>
-                    </a>
+                    <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/Khai Yahwah Favi.png" alt="Khai Yahwah Icon" class="h-8">
+                <span class="logo-text text-2xl font-bold">Khai Yahwah</span>
+            </a>
                     <p class="text-gray-400 max-w-xs">
                         The African Hebrew Israelites of Jerusalem stand as living testimony to the fulfillment of biblical prophecy—the return of the children of Israel to the Promised Land after centuries in captivity.
                     </p>

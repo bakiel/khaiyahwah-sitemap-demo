@@ -121,6 +121,42 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
     font-weight: 600;
 }
 
+/* Dropdown Menu Styles */
+.dropdown .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 0;
+    top: 100%; /* Position below the parent */
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 100; /* Ensure it's above other content */
+    min-width: 180px; /* Minimum width */
+    border-radius: 0.375rem; /* rounded-md */
+    padding-top: 0.25rem; /* py-1 */
+    padding-bottom: 0.25rem; /* py-1 */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu { /* Show on hover/focus */
+    display: block;
+}
+
+.dropdown-menu a {
+    color: var(--text-dark);
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    display: block;
+    white-space: nowrap;
+    font-size: 0.875rem; /* text-sm */
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--light-bg);
+    color: var(--gold);
+    text-decoration: none;
+}
+
+/* Custom padding removed - rely on Tailwind spacing */
 
 .timeline-item {
     position: relative;
@@ -186,7 +222,7 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
     /* border-left: 3px solid var(--gold); */ /* Remove border */
     margin-bottom: 0.5rem; /* Keep original margin */
     transition: all 0.3s ease;
-    color: var(--text-dark); /* Dark color for better contrast */
+    color: var(--dark-bg); /* Changed to defined dark color */
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -203,7 +239,7 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
     transition: max-height 0.3s ease-out; /* Use ease-out */
     /* background-color: var(--light-bg); */ /* Remove background */
     padding: 0 15px; /* Keep horizontal padding */
-    color: var(--text-dark);
+    color: var(--dark-bg); /* Changed to defined dark color */
     line-height: 1.6;
 }
 
@@ -214,7 +250,7 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
     padding-left: 15px;
     padding-right: 15px;
     background-color: white; /* Explicitly set background for contrast */
-    color: var(--text-dark) !important; /* Force dark text color for contrast */
+    color: var(--dark-bg) !important; /* Changed to defined dark color */
 }
 
 .tab-content {
@@ -281,3 +317,18 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
 
 /* Placeholder image style from previous CSS (Ensure only one definition exists) */
 /* Removed duplicate definition */
+
+/* Logo Styles Removed - Using Tailwind classes directly in HTML */
+/* nav .container a img { ... } */ /* Removed */
+/* footer .container img { ... } */ /* Removed */
+
+/* Ensure header icon and text align nicely */
+nav .container a {
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+}
+
+nav .mx-auto.flex.flex-wrap.items-center.justify-between {
+    padding-left: 2rem; /* Increased left padding */
+    padding-right: 2rem; /* Increased right padding */
+}

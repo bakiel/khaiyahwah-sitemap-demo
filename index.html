@@ -8,35 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Khai Yahwah White BG.png" type="image/png"> <!-- Corrected Favicon Path -->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-4 md:px-6 flex flex-wrap items-center justify-between">
-            <a href="#home" class="flex items-center space-x-3">
-                <!-- Removed SVG Logo -->
-                <span class="logo-text text-2xl font-bold">Khai Yahwah</span>
-            </a>
-
-            <button id="mobile-menu-button" class="md:hidden block text-gray-800">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-
-            <div id="nav-menu" class="hidden md:flex w-full md:w-auto md:items-center">
-                <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
-                    <li><a href="#home" class="nav-link active-nav block py-2 md:py-0">Home</a></li>
-                    <li><a href="#journey" class="nav-link block py-2 md:py-0">Our Journey</a></li>
-                    <li><a href="#principles" class="nav-link block py-2 md:py-0">Kingdom Principles</a></li>
-                    <li><a href="#holy-days" class="nav-link block py-2 md:py-0">Holy Days</a></li>
-                    <li><a href="#village" class="nav-link block py-2 md:py-0">Village of Peace</a></li>
-                    <li><a href="#books" class="nav-link block py-2 md:py-0">Books</a></li>
-                    <li><a href="#connect" class="nav-link block py-2 md:py-0">Connect</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation Placeholder -->
+    <div id="main-navigation-placeholder"></div>
 
     <!-- Hero Section -->
     <section id="home" class="dark-section py-20 px-4">
@@ -336,9 +312,10 @@
     <section id="holy-days" class="light-section py-16 px-4">
         <div class="container mx-auto">
             <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Holy Days & Celebrations</h2>
-            <p class="text-center max-w-3xl mx-auto mb-16 text-lg grey-text">
+            <p class="text-center max-w-3xl mx-auto mb-16 text-lg grey-text"> <!-- Restored mb-16 -->
                 Sacred observances that connect us to our heritage and to Yah's divine calendar.
             </p>
+            <!-- Removed Dark Logo -->
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="card bg-white rounded-lg shadow-md overflow-hidden">
@@ -651,87 +628,68 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="dark-section py-16 px-4">
+    <!-- FAQ Section - Now Interactive -->
+    <section id="faq" class="light-section py-16 px-4"> <!-- Changed dark-section to light-section -->
         <div class="container mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
 
-            <div class="max-w-3xl mx-auto">
-                <div class="accordion mb-4">
-                    <div class="accordion-header">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold">Why did you leave America?</h3>
-                            <i class="fas fa-plus text-gold"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="mb-4">
-                            In February 1966, H.E. Ben Ammi received a divine vision from the Angel Gabriel instructing him to lead the people back to the Promised Land. The message was clear: "It is time to start the journey back to the promised land and to establish the long awaited kingdom of God that had been prophesied by Daniel the prophet in the second chapter and the 44th verse. And the year of the Exodus will be 1967."
-                        </p>
-                        <p>
-                            This revelation coincided with the prophetic timeline described in Scripture, which indicated that after approximately 400 years in captivity (from 1619 to 1967), the children of Israel would return to their homeland. The social upheaval in America during 1967—widespread riots, civil unrest, and a massive snowstorm in Chicago that H.E. Ben Ammi saw as divine confirmation—created the conditions for this prophetic exodus to unfold exactly as foretold.
-                        </p>
-                    </div>
+            <div class="max-w-3xl mx-auto" id="faq-accordion"> <!-- Added ID for JS -->
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <h2 class="faq-question accordion-header text-xl"> <!-- Added accordion-header -->
+                        <span>Why did you leave America?</span>
+                        <i class="fas fa-plus text-gold"></i> <!-- Icon for accordion -->
+                    </h2>
+                    <p class="faq-answer bg-white"> <!-- Added bg-white for contrast when open -->
+                        In February 1966, H.E. Ben Ammi received a divine vision from the Angel Gabriel instructing him to lead the people back to the Promised Land. The message was clear: "It is time to start the journey back to the promised land and to establish the long awaited kingdom of God that had been prophesied by Daniel the prophet in the second chapter and the 44th verse. And the year of the Exodus will be 1967."
+                        <br><br>
+                        This revelation coincided with the prophetic timeline described in Scripture, which indicated that after approximately 400 years in captivity (from 1619 to 1967), the children of Israel would return to their homeland. The social upheaval in America during 1967—widespread riots, civil unrest, and a massive snowstorm in Chicago that H.E. Ben Ammi saw as divine confirmation—created the conditions for this prophetic exodus to unfold exactly as foretold.
+                    </p>
                 </div>
 
-                <div class="accordion mb-4">
-                    <div class="accordion-header">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold">How did you know you were Hebrew Israelites?</h3>
-                            <i class="fas fa-plus text-gold"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="mb-4">
-                            Our identity as Hebrew Israelites was revealed through both divine revelation and scriptural study. When we examined passages like Deuteronomy 28, which describes the curses that would befall Israel for disobedience, we recognized our own historical experience of slavery, oppression, and identity loss perfectly described in these prophecies.
-                        </p>
-                        <p class="mb-4">
-                            Deuteronomy 28:68 specifically mentions the children of Israel being taken back into Egypt (symbolizing bondage) in ships—a clear reference to the transatlantic slave trade. The scripture goes on to say they would be sold as bondmen and bondwomen with "none to buy you" (or redeem you), exactly matching our experience in chattel slavery where we were property with no redemption rights.
-                        </p>
-                        <p>
-                            Our identity was not something we invented but something we recovered through divine revelation and careful study of Scripture, archaeology, and history—all of which confirmed that the descendants of the transatlantic slave trade were indeed the children of Israel in exile, precisely as prophesied.
-                        </p>
-                    </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <h2 class="faq-question accordion-header text-xl"> <!-- Added accordion-header -->
+                        <span>How did you know you were Hebrew Israelites?</span>
+                        <i class="fas fa-plus text-gold"></i>
+                    </h2>
+                    <p class="faq-answer bg-white"> <!-- Added bg-white for contrast when open -->
+                        Our identity as Hebrew Israelites was revealed through both divine revelation and scriptural study. When we examined passages like Deuteronomy 28, which describes the curses that would befall Israel for disobedience, we recognized our own historical experience of slavery, oppression, and identity loss perfectly described in these prophecies.
+                        <br><br>
+                        Deuteronomy 28:68 specifically mentions the children of Israel being taken back into Egypt (symbolizing bondage) in ships—a clear reference to the transatlantic slave trade. The scripture goes on to say they would be sold as bondmen and bondwomen with "none to buy you" (or redeem you), exactly matching our experience in chattel slavery where we were property with no redemption rights.
+                        <br><br>
+                        Our identity was not something we invented but something we recovered through divine revelation and careful study of Scripture, archaeology, and history—all of which confirmed that the descendants of the transatlantic slave trade were indeed the children of Israel in exile, precisely as prophesied.
+                    </p>
                 </div>
 
-                <div class="accordion mb-4">
-                    <div class="accordion-header">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold">What is Genesis Nutrition?</h3>
-                            <i class="fas fa-plus text-gold"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="mb-4">
-                            Genesis Nutrition is our community's approach to diet and health based on Genesis 1:29: "Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat."
-                        </p>
-                        <p class="mb-4">
-                            We follow a plant-based, vegan diet that emphasizes living foods, minimal processing, and alignment with natural cycles. This preventative and regenerative approach has virtually eliminated common Western diseases within our community and produced generations of exceptionally healthy children.
-                        </p>
-                        <p>
-                            Our nutrition system focuses not merely on avoiding illness but on actively promoting vibrant health, longevity, and spiritual clarity. We view food as medicine and recognize that physical purity contributes to spiritual receptivity.
-                        </p>
-                    </div>
+                 <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <h2 class="faq-question accordion-header text-xl"> <!-- Added accordion-header -->
+                        <span>What is Genesis Nutrition?</span>
+                        <i class="fas fa-plus text-gold"></i>
+                    </h2>
+                    <p class="faq-answer bg-white"> <!-- Added bg-white for contrast when open -->
+                        Genesis Nutrition is our community's approach to diet and health based on Genesis 1:29: "Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat."
+                        <br><br>
+                        We follow a plant-based, vegan diet that emphasizes living foods, minimal processing, and alignment with natural cycles. This preventative and regenerative approach has virtually eliminated common Western diseases within our community and produced generations of exceptionally healthy children.
+                        <br><br>
+                        Our nutrition system focuses not merely on avoiding illness but on actively promoting vibrant health, longevity, and spiritual clarity. We view food as medicine and recognize that physical purity contributes to spiritual receptivity.
+                    </p>
                 </div>
 
-                <div class="accordion mb-4">
-                    <div class="accordion-header">
-                        <div class="flex justify-between items-center">
-                            <h3 class="font-semibold">How did you establish yourselves in Israel?</h3>
-                            <i class="fas fa-plus text-gold"></i>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="mb-4">
-                            Our establishment in Israel followed a prophetic pattern of testing and vindication. The first arrivals in 1969 settled initially in Arad before expanding to Dimona and Mitzpeh Ramon. For twenty years (1970-1990), we faced significant legal challenges, deportations, and opposition.
-                        </p>
-                        <p class="mb-4">
-                            During this testing period, we remained focused on building our community institutions—the House of Life (natural birthing center), Kingdom School in Holiness, and various self-sustaining enterprises. We maintained our distinctive cultural practices, Genesis Nutrition, and spiritual observances despite external pressure.
-                        </p>
-                        <p>
-                            In 1990, after exactly twenty years—a biblically significant period of testing—the Israeli government granted our community members B-1 work visas, beginning the process of legal recognition. This breakthrough came through persistent diplomacy, growing recognition of our positive contributions to Israeli society, and ultimately, divine timing in fulfillment of prophecy.
-                        </p>
-                    </div>
+                 <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <h2 class="faq-question accordion-header text-xl"> <!-- Added accordion-header -->
+                        <span>How did you establish yourselves in Israel?</span>
+                        <i class="fas fa-plus text-gold"></i>
+                    </h2>
+                    <p class="faq-answer bg-white"> <!-- Added bg-white for contrast when open -->
+                        Our establishment in Israel followed a prophetic pattern of testing and vindication. The first arrivals in 1969 settled initially in Arad before expanding to Dimona and Mitzpeh Ramon. For twenty years (1970-1990), we faced significant legal challenges, deportations, and opposition.
+                        <br><br>
+                        During this testing period, we remained focused on building our community institutions—the House of Life (natural birthing center), Kingdom School in Holiness, and various self-sustaining enterprises. We maintained our distinctive cultural practices, Genesis Nutrition, and spiritual observances despite external pressure.
+                        <br><br>
+                        In 1990, after exactly twenty years—a biblically significant period of testing—the Israeli government granted our community members B-1 work visas, beginning the process of legal recognition. This breakthrough came through persistent diplomacy, growing recognition of our positive contributions to Israeli society, and ultimately, divine timing in fulfillment of prophecy.
+                    </p>
                 </div>
             </div>
         </div>
@@ -880,7 +838,7 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-500 mb-4 md:mb-0">
+                <p class="text-gray-500 mb-4 md:mb-0"> <!-- Kept logo removed -->
                     © 2023 Khai Yahwah. All rights reserved.
                 </p>
                 <div class="flex space-x-4">
