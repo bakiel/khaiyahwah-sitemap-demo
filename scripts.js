@@ -10,7 +10,7 @@ async function loadMenu() {
     }
 
     try {
-        const response = await fetch('/_menu.html'); // Use root-relative path
+        const response = await fetch('./_menu.html'); // Revert to explicitly relative path
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -321,7 +321,7 @@ async function loadFooter() {
     }
 
     try {
-        const response = await fetch('/_footer.html'); // Use root-relative path
+        const response = await fetch('./_footer.html'); // Revert to explicitly relative path
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
