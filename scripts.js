@@ -10,7 +10,16 @@ async function loadMenu() {
     }
 
     try {
-        const menuPath = '/_menu.html'; // Use fixed root-relative path
+        // Determine base path dynamically for GitHub Pages vs local server
+        let basePath = '/'; // Default for local server
+        if (window.location.hostname.includes('github.io')) {
+            // Extract repo name, assuming URL is like user.github.io/repo-name/...
+            const pathSegments = window.location.pathname.split('/');
+            if (pathSegments.length >= 2 && pathSegments[1]) {
+                 basePath = `/${pathSegments[1]}/`;
+            }
+        }
+        const menuPath = `${basePath}_menu.html`.replace('//', '/'); // Ensure no double slashes
         console.log("Fetching menu from:", menuPath); 
 
         const response = await fetch(menuPath);
@@ -324,7 +333,15 @@ async function loadFooter() {
     }
 
     try {
-        const footerPath = '/_footer.html'; // Use fixed root-relative path
+        // Determine base path dynamically (same logic as above)
+        let basePath = '/'; 
+        if (window.location.hostname.includes('github.io')) {
+            const pathSegments = window.location.pathname.split('/');
+            if (pathSegments.length >= 2 && pathSegments[1]) {
+                 basePath = `/${pathSegments[1]}/`;
+            }
+        }
+        const footerPath = `${basePath}_footer.html`.replace('//', '/'); // Ensure no double slashes
         console.log("Fetching footer from:", footerPath); 
 
         const response = await fetch(footerPath);
