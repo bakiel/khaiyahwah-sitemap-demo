@@ -10,7 +10,8 @@ async function loadMenu() {
     }
 
     try {
-        const response = await fetch('_menu.html');
+        // Use absolute path for GitHub Pages subdirectory
+        const response = await fetch('/khaiyahwah-sitemap-demo/_menu.html');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
