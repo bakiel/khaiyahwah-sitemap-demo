@@ -47,10 +47,14 @@
             </div>
         </div>
 
-        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-500 mb-4 md:mb-0">
-                © <script>document.write(new Date().getFullYear())</script> Khai Yahwah. All rights reserved.
-            </p>
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm"> <!-- Added text-sm -->
+            <div class="text-gray-500 mb-4 md:mb-0"> <!-- Group copyright and policy links -->
+                <span>© <script>document.write(new Date().getFullYear())</script> Khai Yahwah. All rights reserved.</span>
+                <span class="mx-2">|</span> <!-- Separator -->
+                <a href="#" class="hover:text-gold">Privacy Policy</a> <!-- Placeholder Link -->
+                <span class="mx-2">|</span> <!-- Separator -->
+                <a href="#" class="hover:text-gold">Terms of Service</a> <!-- Placeholder Link -->
+            </div>
             <div class="flex space-x-4">
                 <a href="#" class="text-gray-400 hover:text-gold"><i class="fab fa-facebook"></i></a>
                 <a href="#" class="text-gray-400 hover:text-gold"><i class="fab fa-instagram"></i></a>
