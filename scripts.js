@@ -10,14 +10,8 @@ async function loadMenu() {
     }
 
     try {
-        // Determine base path dynamically
-        const pathSegments = window.location.pathname.split('/');
-        // Assumes repo name is the second to last segment on GitHub Pages, or it's root locally
-        const repoName = pathSegments.length > 2 ? pathSegments[pathSegments.length - 2] : '';
-        const basePath = window.location.hostname.includes('github.io') ? `/${repoName}/` : '/';
-        
-        const menuPath = `${basePath}_menu.html`.replace('//', '/'); // Avoid double slashes if basePath is '/'
-        console.log("Fetching menu from:", menuPath); // Log the path being used
+        const menuPath = '/_menu.html'; // Use fixed root-relative path
+        console.log("Fetching menu from:", menuPath); 
 
         const response = await fetch(menuPath);
         if (!response.ok) {
@@ -330,13 +324,8 @@ async function loadFooter() {
     }
 
     try {
-        // Determine base path dynamically (same logic as above)
-        const pathSegments = window.location.pathname.split('/');
-        const repoName = pathSegments.length > 2 ? pathSegments[pathSegments.length - 2] : '';
-        const basePath = window.location.hostname.includes('github.io') ? `/${repoName}/` : '/';
-
-        const footerPath = `${basePath}_footer.html`.replace('//', '/'); // Avoid double slashes
-        console.log("Fetching footer from:", footerPath); // Log the path being used
+        const footerPath = '/_footer.html'; // Use fixed root-relative path
+        console.log("Fetching footer from:", footerPath); 
 
         const response = await fetch(footerPath);
         if (!response.ok) {
