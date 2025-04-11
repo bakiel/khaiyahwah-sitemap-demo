@@ -10,9 +10,18 @@ async function loadMenu() {
     }
 
     try {
-        const response = await fetch('./_menu.html'); // Revert to explicitly relative path
+        // Determine base path dynamically
+        const pathSegments = window.location.pathname.split('/');
+        // Assumes repo name is the second to last segment on GitHub Pages, or it's root locally
+        const repoName = pathSegments.length > 2 ? pathSegments[pathSegments.length - 2] : '';
+        const basePath = window.location.hostname.includes('github.io') ? `/${repoName}/` : '/';
+        
+        const menuPath = `${basePath}_menu.html`.replace('//', '/'); // Avoid double slashes if basePath is '/'
+        console.log("Fetching menu from:", menuPath); // Log the path being used
+
+        const response = await fetch(menuPath);
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status} for ${menuPath}`);
         }
         const menuHtml = await response.text();
         placeholder.innerHTML = menuHtml;
@@ -321,9 +330,17 @@ async function loadFooter() {
     }
 
     try {
-        const response = await fetch('./_footer.html'); // Revert to explicitly relative path
+        // Determine base path dynamically (same logic as above)
+        const pathSegments = window.location.pathname.split('/');
+        const repoName = pathSegments.length > 2 ? pathSegments[pathSegments.length - 2] : '';
+        const basePath = window.location.hostname.includes('github.io') ? `/${repoName}/` : '/';
+
+        const footerPath = `${basePath}_footer.html`.replace('//', '/'); // Avoid double slashes
+        console.log("Fetching footer from:", footerPath); // Log the path being used
+
+        const response = await fetch(footerPath);
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status} for ${footerPath}`);
         }
         const footerHtml = await response.text();
         placeholder.innerHTML = footerHtml;
