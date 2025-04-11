@@ -1,5 +1,8 @@
+console.log("scripts.js loaded"); // Add this line
+
 // Function to load the menu and set the active link
 async function loadMenu() {
+    console.log("loadMenu function called"); // Add this line
     const placeholder = document.getElementById('main-navigation-placeholder');
     if (!placeholder) {
         console.error('Menu placeholder not found!');
