@@ -208,6 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load the menu first
     loadMenu(); // This now also calls setActiveNavLink and initializeScrollHighlighting
 
+    // Load the footer
+    loadFooter();
+
     // Accordion functionality (keep as is)
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     accordionHeaders.forEach(header => {
@@ -267,3 +270,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
 
 }); // End DOMContentLoaded listener
+
+
+// --- Function to load the footer ---
+async function loadFooter() {
+    console.log("loadFooter function called");
+    const placeholder = document.getElementById('main-footer-placeholder');
+    if (!placeholder) {
+        // Don't log an error if the placeholder simply isn't on the page
+        // console.error('Footer placeholder not found!');
+        return;
+    }
+
+    try {
+        const response = await fetch('./_footer.html'); // Use explicit relative path
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const footerHtml = await response.text();
+        placeholder.innerHTML = footerHtml;
+
+        // Update year dynamically if needed (optional, already in _footer.html)
+        // const yearSpan = placeholder.querySelector('#current-year');
+        // if (yearSpan) {
+        //     yearSpan.textContent = new Date().getFullYear();
+        // }
+
+    } catch (error) {
+        console.error('Error loading footer:', error);
+        placeholder.innerHTML = `<p class="text-red-500 text-center">Error loading footer.</p>`;
+    }
+}
