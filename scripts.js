@@ -243,11 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load the menu first
     loadMenu(); // This now also calls setActiveNavLink and initializeScrollHighlighting
 
-    // Load the footer
+    // Load the footer (which will initialize the back-to-top button)
     loadFooter();
-
-    // Initialize Back to Top button logic
-    initializeBackToTop();
 
     // Accordion functionality (keep as is)
     const accordionHeaders = document.querySelectorAll('.accordion-header');
@@ -327,6 +324,9 @@ async function loadFooter() {
         }
         const footerHtml = await response.text();
         placeholder.innerHTML = footerHtml;
+
+        // Initialize the Back to Top button *after* footer is loaded
+        initializeBackToTop();
 
         // Update year dynamically if needed (optional, already in _footer.html)
         // const yearSpan = placeholder.querySelector('#current-year');
