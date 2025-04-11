@@ -10,7 +10,7 @@ async function loadMenu() {
     }
 
     try {
-        const response = await fetch('./_menu.html'); // Explicitly relative path
+        const response = await fetch('/_menu.html'); // Use root-relative path
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -107,6 +107,8 @@ function setActiveNavLink() {
         activeHref = 'books.html';
     } else if (['connect.html', 'resources.html', 'blog.html', 'faq.html', 'store.html'].includes(currentPage)) {
         activeHref = 'connect.html';
+    } else if (currentPage === 'global-impact.html') { // Add condition for new page
+        activeHref = 'global-impact.html';
     }
     // --- End mapping ---
 
@@ -194,17 +196,18 @@ function initializeScrollHighlighting() {
     }
 
      // Helper function to get the statically determined active link href
-     function getActiveHrefForCurrentPage() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        if (currentPage.startsWith('journey-')) return 'journey-overview.html';
-        if (currentPage.startsWith('principles-')) return '#principles';
-        if (currentPage.startsWith('holydays-')) return '#holy-days';
-        if (currentPage.startsWith('village-')) return '#village';
-        if (currentPage.startsWith('testimony-') || currentPage === 'testimonies.html') return 'testimonies.html';
-        if (currentPage === 'books.html' || currentPage === 'author-profile.html') return 'books.html';
-        if (['connect.html', 'resources.html', 'blog.html', 'faq.html', 'store.html'].includes(currentPage)) return 'connect.html';
-        return 'index.html';
-     }
+      function getActiveHrefForCurrentPage() {
+         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+         if (currentPage.startsWith('journey-')) return 'journey-overview.html';
+         if (currentPage.startsWith('principles-')) return '#principles';
+         if (currentPage.startsWith('holydays-')) return '#holy-days';
+         if (currentPage.startsWith('village-')) return '#village';
+         if (currentPage.startsWith('testimony-') || currentPage === 'testimonies.html') return 'testimonies.html';
+         if (currentPage === 'books.html' || currentPage === 'author-profile.html') return 'books.html';
+         if (currentPage === 'global-impact.html') return 'global-impact.html'; // Add condition for new page
+         if (['connect.html', 'resources.html', 'blog.html', 'faq.html', 'store.html'].includes(currentPage)) return 'connect.html';
+         return 'index.html';
+      }
 
 
     // Add scroll listener only if there are sections and nav links to monitor
@@ -318,7 +321,7 @@ async function loadFooter() {
     }
 
     try {
-        const response = await fetch('./_footer.html'); // Use explicit relative path
+        const response = await fetch('/_footer.html'); // Use root-relative path
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

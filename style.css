@@ -46,6 +46,67 @@ h3 { font-size: 1.25rem; font-weight: 700; } /* Example size */
     color: var(--dark-bg);
 }
 
+/* === Contrast Fixes Start === */
+/* Set default text colors for direct children elements within sections */
+.dark-section > div > h1,
+.dark-section > div > h2,
+.dark-section > div > h3,
+.dark-section > div > h4,
+.dark-section > div > h5,
+.dark-section > div > p {
+    color: var(--light-bg); /* Default light text */
+}
+
+.light-section > div > h1,
+.light-section > div > h2,
+.light-section > div > h3,
+.light-section > div > h4,
+.light-section > div > h5,
+.light-section > div > p {
+    color: var(--dark-bg); /* Default dark text */
+}
+
+/* Allow specific Tailwind overrides if they are applied directly to the element */
+.dark-section .text-gold, .light-section .text-gold { color: var(--gold); }
+.dark-section .text-gray-100, .light-section .text-gray-100 { color: #f3f4f6; }
+.dark-section .text-gray-200, .light-section .text-gray-200 { color: #e5e7eb; }
+.dark-section .text-gray-300, .light-section .text-gray-300 { color: #d1d5db; }
+.dark-section .text-gray-400, .light-section .text-gray-400 { color: #9ca3af; }
+.dark-section .text-gray-500, .light-section .text-gray-500 { color: #6b7280; }
+.dark-section .text-gray-600, .light-section .text-gray-600 { color: #4b5563; }
+.dark-section .text-gray-700, .light-section .text-gray-700 { color: #374151; }
+.dark-section .text-gray-800, .light-section .text-gray-800 { color: #1f2937; }
+.dark-section .text-white, .light-section .text-white { color: #ffffff; }
+
+/* Ensure nested dark section text is light */
+.light-section .dark-section > div > h3,
+.light-section .dark-section > div > p {
+    color: var(--light-bg); /* Light text for nested dark section */
+}
+.light-section .dark-section .text-gray-200 { color: #e5e7eb; } /* Keep specific light gray */
+
+/* Ensure timeline content text is dark */
+.dark-section .timeline-content p,
+.dark-section .timeline-content h3 {
+    color: var(--dark-bg); /* Dark text for timeline content */
+}
+.dark-section .timeline-content .text-gold {
+    color: var(--gold); /* Keep gold text */
+}
+.dark-section .timeline-content .text-gray-800 {
+     color: #1f2937; /* Ensure specific dark gray works */
+}
+
+/* Ensure counter box text is dark */
+.light-section .counter-box p {
+    color: var(--dark-bg); /* Dark text for counter box */
+}
+.light-section .counter-box .text-gray-800 {
+     color: #1f2937; /* Ensure specific dark gray works */
+}
+/* === Contrast Fixes End === */
+
+
 .grey-text {
     color: var(--text-grey);
 }
@@ -343,4 +404,266 @@ nav .container a {
 nav .mx-auto.flex.flex-wrap.items-center.justify-between {
     padding-left: 2rem; /* Increased left padding */
     padding-right: 2rem; /* Increased right padding */
+}
+
+/* Styles for Global Impact Page Components */
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--gold);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: var(--light-bg); /* Use variable */
+    border: 4px solid var(--gold);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--gold);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--gold);
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--gold);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--gold) transparent transparent;
+}
+
+.right::after {
+    left: -12px;
+}
+
+.timeline-content { /* This class exists in the new HTML */
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Accordion styles (Using new class names from global-impact.html) */
+.accordion { /* New class */
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.accordion-header { /* New class */
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #2a2a2a;
+}
+
+.accordion-content { /* New class */
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    /* Add padding when active via JS/class */
+}
+
+.accordion-content.active {
+    max-height: 1000px; /* Ensure this is enough */
+    padding: 20px; /* Add padding when active */
+}
+
+/* Map styles */
+.map-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-marker:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: var(--highlight);
+}
+
+.map-info {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    min-width: 200px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.map-marker:hover + .map-info {
+    opacity: 1;
+}
+
+/* Gallery styles */
+.swiper {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    /* Add default background or text color if needed */
+    display: flex; /* Optional: for aligning content inside */
+    align-items: center; /* Optional */
+    justify-content: center; /* Optional */
+    color: white; /* Example text color */
+}
+/* Ensure Swiper pagination bullets are visible */
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+}
+.swiper-pagination-bullet-active {
+    background: var(--gold);
+}
+
+
+/* Counter styles */
+.counter-box {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.counter-box:hover {
+    transform: translateY(-10px);
+}
+
+.counter-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+/* Testimonial styles */
+.testimonial {
+    padding: 30px;
+    margin: 20px 0; /* Adjust as needed */
+    border-radius: 8px;
+    position: relative;
+}
+
+.testimonial-quote {
+    font-size: 1.5rem; /* Adjust size */
+    position: absolute;
+    top: -15px; /* Adjust position */
+    left: 20px; /* Adjust position */
+    color: var(--gold);
+}
+
+/* Responsive adjustments for Timeline */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-container::before {
+        left: 60px;
+        border: medium solid var(--gold);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--gold) transparent transparent;
+    }
+
+    .left::after, .right::after {
+        left: 18px; /* Adjust based on new position */
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+/* Pulse Animation for Button */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(197, 160, 89, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+}
+
+.animate-pulse-button {
+    animation: pulse 2s infinite;
+    /* Ensure button styles are applied */
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
 }
