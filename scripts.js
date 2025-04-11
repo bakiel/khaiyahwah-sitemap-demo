@@ -52,6 +52,41 @@ async function loadMenu() {
     }
 }
 
+
+// --- Back to Top Button Logic ---
+function initializeBackToTop() {
+    const backToTopButton = document.getElementById('back-to-top-button');
+
+    if (!backToTopButton) {
+        // Don't log error if button isn't present (might be intentional on some layouts)
+        return;
+    }
+
+    // Show/Hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) { // Show after scrolling 300px
+            backToTopButton.classList.remove('hidden');
+            backToTopButton.classList.add('opacity-100'); // Fade in
+        } else {
+            backToTopButton.classList.add('opacity-0'); // Fade out
+            // Use setTimeout to add 'hidden' after fade-out transition
+            setTimeout(() => {
+                 if (window.pageYOffset <= 300) { // Double check in case user scrolled back up quickly
+                    backToTopButton.classList.add('hidden');
+                 }
+            }, 300); // Match transition duration
+        }
+    });
+
+    // Scroll to top on click
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 // Function to set the active navigation link
 function setActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html'; // Default to index.html if path is empty
@@ -210,6 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load the footer
     loadFooter();
+
+    // Initialize Back to Top button logic
+    initializeBackToTop();
 
     // Accordion functionality (keep as is)
     const accordionHeaders = document.querySelectorAll('.accordion-header');
